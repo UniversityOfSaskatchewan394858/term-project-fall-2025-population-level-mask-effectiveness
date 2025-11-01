@@ -213,8 +213,8 @@
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>//moveTo(uniform(0, main.spaceSideLength), uniform(0, main.spaceSideLength))
-moveTo(main.rectangle.randomPointInside());</EntryAction>
+				<EntryAction>moveTo(uniform(0, main.spaceSideLength), uniform(0, main.spaceSideLength))
+//moveTo(main.rectangle.randomPointInside());</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
