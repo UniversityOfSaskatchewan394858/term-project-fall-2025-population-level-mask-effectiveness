@@ -94,6 +94,7 @@
 	<CurrentLevel>1762014522371</CurrentLevel>
 	<ConnectionsId>1762014522366</ConnectionsId>
 	<Variables xmlns:al="http://anylogic.com"/>
+	<Events xmlns:al="http://anylogic.com"/>
 	<AgentLinks>
 		<AgentLink>
 			<Id>1762014522366</Id>
@@ -119,6 +120,7 @@
 			<LineArrowPosition>END</LineArrowPosition>
 		</AgentLink>
 	</AgentLinks>
+	<EmbeddedObjects xmlns:al="http://anylogic.com"/>
 	<Presentation>
 		<Level>
 			<Id>1762014522371</Id>
@@ -135,6 +137,29 @@
 			<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 			<Z>0</Z>
 			<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+			<Presentation xmlns:al="http://anylogic.com"/>
 		</Level>
+		<EmbeddedObjectPresentation>
+			<Id>1762017763598</Id>
+			<Name><![CDATA[People_presentation]]></Name>
+			<X>0</X>
+			<Y>0</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>true</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+			<EmbeddedIcon>false</EmbeddedIcon>
+			<Z>0</Z>
+			<Rotation>0.0</Rotation>
+			<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+			<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+			<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+			<Latitude>0.0</Latitude>
+			<Longitude>0.0</Longitude>
+		</EmbeddedObjectPresentation>
 	</Presentation>
 </ActiveObjectClass>

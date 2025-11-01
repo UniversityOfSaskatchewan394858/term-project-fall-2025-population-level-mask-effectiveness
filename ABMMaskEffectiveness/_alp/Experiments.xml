@@ -108,6 +108,9 @@
 			<Parameter>
 				<ParameterName>maximumAvailableVaccinations</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>agentSpeed</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>

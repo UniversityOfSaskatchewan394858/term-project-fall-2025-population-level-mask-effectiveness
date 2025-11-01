@@ -20,8 +20,8 @@
 		<TimeAccuracy>1.0E-5</TimeAccuracy>
 		<Frame>
 			<Id>1762014522363</Id>
-			<Width>1010</Width>
-			<Height>940</Height>
+			<Width>1800</Width>
+			<Height>1400</Height>
 		</Frame>
 		<Database>
 			<Id>1762014522362</Id>
@@ -58,6 +58,12 @@
 			<VersionMajor>1</VersionMajor>
 			<VersionMinor>0</VersionMinor>
 			<VersionBuild>0</VersionBuild>
+		</RequiredLibraryReference>
+		<RequiredLibraryReference>
+			<LibraryName>com.anylogic.libraries.processmodeling</LibraryName>
+			<VersionMajor>8</VersionMajor>
+			<VersionMinor>0</VersionMinor>
+			<VersionBuild>5</VersionBuild>
 		</RequiredLibraryReference>
 	</Model>
 	<ConvertersApplied>
