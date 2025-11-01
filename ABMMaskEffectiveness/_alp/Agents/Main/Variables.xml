@@ -22,25 +22,6 @@
 			</InitialValue>
 		</Properties>
 	</Variable>
-	<Variable Class="PlainVariable">
-		<Id>1762024715077</Id>
-		<Name><![CDATA[variable]]></Name>
-		<X>-210</X>
-		<Y>130</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true"
-              Constant="false"
-              AccessType="public"
-              StaticVariable="false">
-			<Type><![CDATA[double]]></Type>
-		</Properties>
-	</Variable>
 	<Variable Class="Parameter">
 		<Id>1762015048837</Id>
 		<Name><![CDATA[maskEffectiveness]]></Name>
@@ -663,7 +644,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[1.0]]></Code>
+				<Code><![CDATA[0.0005]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762017198557</Id>
