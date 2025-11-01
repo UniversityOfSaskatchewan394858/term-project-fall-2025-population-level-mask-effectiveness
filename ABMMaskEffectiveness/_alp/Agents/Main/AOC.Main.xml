@@ -54,7 +54,7 @@
 		<RowsCountCode>100</RowsCountCode>
 		<NeigborhoodType>MOORE</NeigborhoodType>
 		<LayoutType>USER_DEF</LayoutType>
-		<NetworkType>USER_DEF</NetworkType>
+		<NetworkType>DISTANCE_BASED</NetworkType>
 		<ConnectionsPerAgentCode>2</ConnectionsPerAgentCode>
 		<ConnectionsRangeCode>50</ConnectionsRangeCode>
 		<NeighborLinkFractionCode>0.95</NeighborLinkFractionCode>

@@ -2,7 +2,7 @@
 <Experiments>
 	<SimulationExperiment ActiveObjectClassId="1762014522365">
 		<Id>1762014522373</Id>
-		<Name><![CDATA[Simulation]]></Name>
+		<Name><![CDATA[Baseline]]></Name>
 		<CommandLineArguments/>
 		<MaximumMemory>512</MaximumMemory>
 		<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
@@ -49,7 +49,7 @@
 				<ParameterName>startingPopulation</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>initialSusceptibleVaccineHesitancy</ParameterName>
+				<ParameterName>initialVaccineHesitancy</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>initialMaskAdoptionRate</ParameterName>
@@ -61,19 +61,10 @@
 				<ParameterName>popularityInducedMaskAdoptionIncreaseRate</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>maskedUnmaskedLengthOfContact</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>waningOfVaccineInducedImmunity</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>maskMandateInducedAdoptionIncreaseRate</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>unmaskedMaskedLengthOfContact</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>maskedMaskedLengthOfContact</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>networkType</ParameterName>
@@ -94,12 +85,6 @@
 				<ParameterName>vaccineEffectiveness</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>infectiveDeathRate</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>infectiveRecoveryRate</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>fearInducedVaccinationAcceptanceIncreaseRate</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -110,6 +95,12 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>agentSpeed</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>infectiveRecoveryRate</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>infectiveDeathRate</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>

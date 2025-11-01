@@ -28,4 +28,100 @@
 		<FillColor>-1</FillColor>
 		<FillMaterial>null</FillMaterial>
 	</Rectangle>
+	<BarChart>
+		<Id>1762027086175</Id>
+		<Name><![CDATA[chart]]></Name>
+		<X>280</X>
+		<Y>-360</Y>
+		<Label>
+			<X>0</X>
+			<Y>-10</Y>
+		</Label>
+		<PublicFlag>true</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<AutoUpdate>true</AutoUpdate>
+		<RecurrenceProperties>
+			<Id>1762027086173</Id>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1762070400000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">DAY</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">DAY</Unit>
+			</RecurrenceCode>
+		</RecurrenceProperties>
+		<EmbeddedIcon>false</EmbeddedIcon>
+		<Width>350</Width>
+		<Height>310</Height>
+		<BackgroundColor/>
+		<BorderColor/>
+		<ChartArea>
+			<XOffset>50</XOffset>
+			<YOffset>30</YOffset>
+			<Width>270</Width>
+			<Height>220</Height>
+			<BackgroundColor>-1</BackgroundColor>
+			<BorderColor>-16777216</BorderColor>
+			<GridColor>-12566464</GridColor>
+		</ChartArea>
+		<Legend>
+			<Place>SOUTH</Place>
+			<TextColor>-16777216</TextColor>
+			<Size>30</Size>
+		</Legend>
+		<Labels>
+			<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+			<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+			<TextColor>-12566464</TextColor>
+		</Labels>
+		<ShowLegend>true</ShowLegend>
+		<DataItem>
+			<Id>1762027087620</Id>
+			<Expression>0//count(People, p -&gt; p.inState(Susceptible))</Expression>
+			<Color>-16711936</Color>
+			<Title>Susceptible</Title>
+		</DataItem>
+		<DataItem>
+			<Id>1762027136340</Id>
+			<Expression>0</Expression>
+			<Color>-256</Color>
+			<Title>Title 1</Title>
+		</DataItem>
+		<DataItem>
+			<Id>1762027137554</Id>
+			<Expression>0</Expression>
+			<Color>-65536</Color>
+			<Title>Title 2</Title>
+		</DataItem>
+		<DataItem>
+			<Id>1762027138603</Id>
+			<Expression>0</Expression>
+			<Color>-4565549</Color>
+			<Title>Title 3</Title>
+		</DataItem>
+		<DataItem>
+			<Id>1762027140006</Id>
+			<Expression>0</Expression>
+			<Color>-2354116</Color>
+			<Title>Title 4</Title>
+		</DataItem>
+		<DataItem>
+			<Id>1762027141692</Id>
+			<Expression>0</Expression>
+			<Color>-10496</Color>
+			<Title>Title 5</Title>
+		</DataItem>
+		<ScaleFromExpression>0</ScaleFromExpression>
+		<ScaleToExpression>1</ScaleToExpression>
+		<ScaleType>AUTO</ScaleType>
+		<Bars>
+			<Direction>UP</Direction>
+			<RelativeWidth>0.8</RelativeWidth>
+		</Bars>
+	</BarChart>
 </Presentation>
