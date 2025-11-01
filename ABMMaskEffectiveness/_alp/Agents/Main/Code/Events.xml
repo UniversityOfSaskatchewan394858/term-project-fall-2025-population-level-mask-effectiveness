@@ -3,7 +3,6 @@
 	<Event>
 		<Id>1762017198541</Id>
 		<Name><![CDATA[updateNetworkEvent]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
 		<X>-210</X>
 		<Y>280</Y>
 		<Label>
@@ -40,7 +39,6 @@
 	<Event>
 		<Id>1762017198552</Id>
 		<Name><![CDATA[initialInfectionEvent]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
 		<X>-210</X>
 		<Y>330</Y>
 		<Label>

@@ -94,12 +94,6 @@
 				<ParameterName>vaccineEffectiveness</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>infectiveDeathRate</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>infectiveRecoveryRate</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>fearInducedVaccinationAcceptanceIncreaseRate</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -110,6 +104,12 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>agentSpeed</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>infectiveRecoveryRate</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>infectiveDeathRate</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
