@@ -5,6 +5,6 @@ applyNetwork();
 
 void initialInfectionEvent()
 {/*ALCODESTART::1762017198552*/
-sendToRandomAgentInside("Infect");
+sendToRandomAgentInside("InitialInfect");
 /*ALCODEEND*/}
 

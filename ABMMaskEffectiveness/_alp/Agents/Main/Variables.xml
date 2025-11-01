@@ -3,8 +3,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1762019202031</Id>
 		<Name><![CDATA[spaceSideLength]]></Name>
-		<X>530</X>
-		<Y>100</Y>
+		<X>-590</X>
+		<Y>570</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -22,12 +22,33 @@
 			</InitialValue>
 		</Properties>
 	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1762028885408</Id>
+		<Name><![CDATA[availableVaccinations]]></Name>
+		<X>-640</X>
+		<Y>990</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[double]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[maximumAvailableVaccinations]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
 	<Variable Class="Parameter">
 		<Id>1762015048837</Id>
 		<Name><![CDATA[maskEffectiveness]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>150</Y>
+		<X>-410</X>
+		<Y>620</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -51,8 +72,8 @@
 	<Variable Class="Parameter">
 		<Id>1762015048842</Id>
 		<Name><![CDATA[populationDensity]]></Name>
-		<X>710</X>
-		<Y>60</Y>
+		<X>-410</X>
+		<Y>530</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -79,8 +100,8 @@
 	<Variable Class="Parameter">
 		<Id>1762015048846</Id>
 		<Name><![CDATA[startingPopulation]]></Name>
-		<X>710</X>
-		<Y>30</Y>
+		<X>-410</X>
+		<Y>500</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -106,10 +127,9 @@
 	</Variable>
 	<Variable Class="Parameter">
 		<Id>1762015048850</Id>
-		<Name><![CDATA[initialSusceptibleVaccineHesitancy]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>350</Y>
+		<Name><![CDATA[initialVaccineHesitancy]]></Name>
+		<X>-410</X>
+		<Y>820</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -134,8 +154,8 @@
 		<Id>1762015048854</Id>
 		<Name><![CDATA[initialMaskAdoptionRate]]></Name>
 		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>610</Y>
+		<X>-410</X>
+		<Y>1080</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -160,8 +180,8 @@
 		<Id>1762015048858</Id>
 		<Name><![CDATA[fearInducedMaskAdoptionIncreaseRate]]></Name>
 		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>645</Y>
+		<X>-410</X>
+		<Y>1115</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -186,8 +206,8 @@
 		<Id>1762015048862</Id>
 		<Name><![CDATA[popularityInducedMaskAdoptionIncreaseRate]]></Name>
 		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>680</Y>
+		<X>-410</X>
+		<Y>1150</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -209,37 +229,10 @@
 		</Properties>
 	</Variable>
 	<Variable Class="Parameter">
-		<Id>1762015048866</Id>
-		<Name><![CDATA[maskedUnmaskedLengthOfContact]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>770</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<ParameterEditor>
-				<Id>1762015048864</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
 		<Id>1762015048870</Id>
 		<Name><![CDATA[waningOfVaccineInducedImmunity]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>405</Y>
+		<X>-410</X>
+		<Y>875</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -251,6 +244,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[0.00833333333]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048868</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -264,8 +260,8 @@
 		<Id>1762015048874</Id>
 		<Name><![CDATA[maskMandateInducedAdoptionIncreaseRate]]></Name>
 		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>720</Y>
+		<X>-410</X>
+		<Y>1190</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -287,63 +283,11 @@
 		</Properties>
 	</Variable>
 	<Variable Class="Parameter">
-		<Id>1762015048878</Id>
-		<Name><![CDATA[unmaskedMaskedLengthOfContact]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>810</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<ParameterEditor>
-				<Id>1762015048876</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
-		<Id>1762015048882</Id>
-		<Name><![CDATA[maskedMaskedLengthOfContact]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>850</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<ParameterEditor>
-				<Id>1762015048880</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
 		<Id>1762015048886</Id>
 		<Name><![CDATA[networkType]]></Name>
 		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>905</Y>
+		<X>-410</X>
+		<Y>1250</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -367,9 +311,8 @@
 	<Variable Class="Parameter">
 		<Id>1762015048890</Id>
 		<Name><![CDATA[waningOfNaturalImmunity]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>430</Y>
+		<X>-410</X>
+		<Y>900</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -381,6 +324,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[0.00833333333]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048888</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -394,8 +340,8 @@
 		<Id>1762015048894</Id>
 		<Name><![CDATA[maskMandateStartDay]]></Name>
 		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>120</Y>
+		<X>-410</X>
+		<Y>590</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -422,9 +368,8 @@
 	<Variable Class="Parameter">
 		<Id>1762015048898</Id>
 		<Name><![CDATA[vaccineAvailabilityDay]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>320</Y>
+		<X>-410</X>
+		<Y>790</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -448,9 +393,8 @@
 	<Variable Class="Parameter">
 		<Id>1762015048902</Id>
 		<Name><![CDATA[initialVaccinationRate]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>380</Y>
+		<X>-410</X>
+		<Y>850</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -474,9 +418,8 @@
 	<Variable Class="Parameter">
 		<Id>1762015048906</Id>
 		<Name><![CDATA[vaccineEffectiveness]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>460</Y>
+		<X>-410</X>
+		<Y>930</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -500,9 +443,8 @@
 	<Variable Class="Parameter">
 		<Id>1762015048910</Id>
 		<Name><![CDATA[infectiveDeathRate]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>200</Y>
+		<X>-410</X>
+		<Y>670</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -514,6 +456,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[0.01]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048908</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -526,9 +471,8 @@
 	<Variable Class="Parameter">
 		<Id>1762015048914</Id>
 		<Name><![CDATA[infectiveRecoveryRate]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>230</Y>
+		<X>-410</X>
+		<Y>700</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -540,6 +484,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[0.07142857142]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048912</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -552,9 +499,8 @@
 	<Variable Class="Parameter">
 		<Id>1762015048918</Id>
 		<Name><![CDATA[fearInducedVaccinationAcceptanceIncreaseRate]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>490</Y>
+		<X>-410</X>
+		<Y>960</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -579,8 +525,8 @@
 		<Id>1762015048922</Id>
 		<Name><![CDATA[vaccineMandateStartDay]]></Name>
 		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>290</Y>
+		<X>-410</X>
+		<Y>760</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -604,9 +550,8 @@
 	<Variable Class="Parameter">
 		<Id>1762015048926</Id>
 		<Name><![CDATA[maximumAvailableVaccinations]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
-		<X>710</X>
-		<Y>520</Y>
+		<X>-410</X>
+		<Y>990</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -618,6 +563,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[100]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048924</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -644,7 +592,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.0005]]></Code>
+				<Code><![CDATA[0.00005]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762017198557</Id>
