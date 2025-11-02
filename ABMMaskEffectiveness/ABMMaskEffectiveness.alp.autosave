@@ -151,6 +151,9 @@
 						<Type><![CDATA[double]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.56]]></Code>
+						</DefaultValue>
 						<ParameterEditor>
 							<Id>1762015048835</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
@@ -334,7 +337,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.3]]></Code>
+							<Code><![CDATA[0.25]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1762015048872</Id>
@@ -707,6 +710,38 @@
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
 					<Action><![CDATA[sendToRandomAgentInside("InitialInfect");]]></Action>
+				</Event>
+				<Event>
+					<Id>1762121326766</Id>
+					<Name><![CDATA[checkInfectionNumber]]></Name>
+					<X>-210</X><Y>360</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_DAY]]></Unit>
+						</Rate>
+						<Id>1762121326764</Id>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1762156800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[People.Infective() > People.Susceptible()]]></Condition>
+					</Properties>
+					<Action><![CDATA[traceln("Infected surpassed susceptibles on day: " + time());]]></Action>
 				</Event>
 			</Events>
 			<AgentLinks>
@@ -1135,7 +1170,8 @@
                         <EmbeddedIcon>false</EmbeddedIcon>	
 						<TextColor>-16777216</TextColor>
 						<Enabled>true</Enabled>
-						<ActionCode><![CDATA[maskMandate = true;]]></ActionCode>
+						<ActionCode><![CDATA[maskMandate = true;
+traceln("Mask mandate applied on day: " + time());]]></ActionCode>
 					</BasicProperties>
 					<ExtendedProperties>
 						<Font Name="Dialog" Size="11" Style="0"/>
@@ -1197,16 +1233,6 @@
 					<VerScaleType>AUTO</VerScaleType>
 					<DrawLine>true</DrawLine>
 					<Interpolation>LINEAR</Interpolation>
-					<DatasetExpression>  
-						<Title><![CDATA[Unmasked]]></Title>
-					<Id>1762077395877</Id>
-					<Expression><![CDATA[my_dataset]]></Expression>
-					<Color>-65536</Color>
-					<Expression2><![CDATA[People.Unmasked()]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
 					<DatasetExpression>  
 						<Title><![CDATA[Masked]]></Title>
 					<Id>1762077500366</Id>
@@ -2060,9 +2086,9 @@
 						<Guard><![CDATA[infectionTransmitted(infector) == true]]></Guard>
 						<MessageType><![CDATA[Object]]></MessageType>
 						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[equalsTo]]></FilterType>
+						<FilterType><![CDATA[satisfies]]></FilterType>
 						<EqualsExpression><![CDATA["Infect"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+						<SatisfiesExpression><![CDATA[(msg == "Infect") && randomFalse(getMaskEffectiveness())]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
@@ -2328,7 +2354,7 @@
 				<ActionChartElement Class="ActionChart">
 					<Id>1762074837951</Id>
 					<Name><![CDATA[actionChartIsWearingMask]]></Name>
-					<X>1320</X><Y>300</Y>
+					<X>1300</X><Y>60</Y>
 					<Label><X>-80</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2342,7 +2368,7 @@
 				<ActionChartElement Class="Decision">
 					<Id>1762075366916</Id>
 					<Name><![CDATA[maskMandate]]></Name>
-					<X>1320</X><Y>605</Y>
+					<X>1300</X><Y>365</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -2355,7 +2381,7 @@
 				<ActionChartElement Class="Return">
 					<Id>1762076139888</Id>
 					<Name><![CDATA[returnFalse2]]></Name>
-					<X>1220</X><Y>677</Y>
+					<X>1200</X><Y>437</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -2367,7 +2393,7 @@
 				<ActionChartElement Class="Return">
 					<Id>1762074908771</Id>
 					<Name><![CDATA[returnTrue2]]></Name>
-					<X>1320</X><Y>740</Y>
+					<X>1300</X><Y>500</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -2379,7 +2405,7 @@
 				<ActionChartElement Class="Decision">
 					<Id>1762074951144</Id>
 					<Name><![CDATA[decisionMaskMandate]]></Name>
-					<X>1320</X><Y>350</Y>
+					<X>1300</X><Y>110</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -2392,7 +2418,7 @@
 				<ActionChartElement Class="Decision">
 					<Id>1762075713388</Id>
 					<Name><![CDATA[noMaskMandate]]></Name>
-					<X>1180</X><Y>420</Y>
+					<X>1160</X><Y>180</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -2405,7 +2431,7 @@
 				<ActionChartElement Class="Return">
 					<Id>1762075725357</Id>
 					<Name><![CDATA[returnTrue]]></Name>
-					<X>1270</X><Y>485</Y>
+					<X>1250</X><Y>245</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -2417,7 +2443,7 @@
 				<ActionChartElement Class="Return">
 					<Id>1762074985683</Id>
 					<Name><![CDATA[returnFalse]]></Name>
-					<X>1180</X><Y>545</Y>
+					<X>1160</X><Y>305</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -2611,7 +2637,7 @@ return false;]]></Body>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1762074225605</Id>
 					<Name><![CDATA[getMaskEffectiveness]]></Name>
-					<X>960</X><Y>290</Y>
+					<X>760</X><Y>500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2842,6 +2868,9 @@ else
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[startingPopulation]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[500]]></Code>
+					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[initialVaccineHesitancy]]></ParameterName>
@@ -2905,6 +2934,131 @@ else
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
 				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
 				<Title><![CDATA[ABMMaskEffectiveness : Simulation]]></Title>
+				<EnableDeveloperPanel>true</EnableDeveloperPanel>
+				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
+				<RealTimeScale>1.0</RealTimeScale>
+			</PresentationProperties>
+			<ModelTimeProperties>
+				<StopOption><![CDATA[Never]]></StopOption>
+				<InitialDate><![CDATA[1761955200000]]></InitialDate>
+				<InitialTime><![CDATA[0.0]]></InitialTime>
+				<FinalDate><![CDATA[1764547200000]]></FinalDate>
+				<FinalTime><![CDATA[100.0]]></FinalTime>
+			</ModelTimeProperties>
+			<BypassInitialScreen>true</BypassInitialScreen>
+		</SimulationExperiment>
+		<!--   =========   Simulation Experiment   ========  -->
+		<SimulationExperiment ActiveObjectClassId="1762014522365">
+			<Id>1762122423273</Id>
+			<Name><![CDATA[maskEffectiveness83]]></Name>
+			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
+			<MaximumMemory>512</MaximumMemory>
+			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
+			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
+			<SeedValue>1</SeedValue>
+			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
+			<VmArgs><![CDATA[]]></VmArgs>
+			<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+
+			<Presentation>
+				<Text>
+					<Id>1762122423275</Id>
+					<Name><![CDATA[text]]></Name>
+					<X>50</X><Y>30</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-12490271</Color>
+					<Text><![CDATA[ABMMaskEffectiveness]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>24</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+			</Presentation>
+
+			<Parameters>
+				<Parameter>
+					<ParameterName><![CDATA[maskEffectiveness]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[0.83]]></Code>
+					</ParameterValue>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[populationDensity]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[startingPopulation]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[initialVaccineHesitancy]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[initialMaskAdoptionRate]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[fearInducedMaskAdoptionIncreaseRate]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[popularityInducedMaskAdoptionIncreaseRate]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[waningOfVaccineInducedImmunity]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[maskMandateInducedAdoptionIncreaseRate]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[networkType]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[waningOfNaturalImmunity]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[maskMandateStartDay]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[vaccineAvailabilityDay]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[initialVaccinationRate]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[vaccineEffectiveness]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[infectiveDeathRate]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[infectiveRecoveryRate]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[fearInducedVaccinationAcceptanceIncreaseRate]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[vaccineMandateStartDay]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[maximumAvailableVaccinations]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[agentSpeed]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[maskMandate]]></ParameterName>
+				</Parameter>
+			</Parameters>
+			<PresentationProperties>
+				<EnableZoomAndPanning>true</EnableZoomAndPanning>
+				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
+				<Title><![CDATA[ABMMaskEffectiveness : maskEffectiveness83]]></Title>
 				<EnableDeveloperPanel>true</EnableDeveloperPanel>
 				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 				<RealTimeScale>1.0</RealTimeScale>
