@@ -245,6 +245,7 @@
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
+				<EntryAction>maskImage.setVisible(false);;</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
@@ -261,6 +262,7 @@
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
+				<EntryAction>maskImage.setVisible(true);;</EntryAction>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
