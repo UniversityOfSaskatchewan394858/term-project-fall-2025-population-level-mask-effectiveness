@@ -3,8 +3,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1762018115589</Id>
 		<Name><![CDATA[colour]]></Name>
-		<X>40</X>
-		<Y>40</Y>
+		<X>30</X>
+		<Y>20</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -25,8 +25,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1762023370487</Id>
 		<Name><![CDATA[infector]]></Name>
-		<X>35</X>
-		<Y>230</Y>
+		<X>30</X>
+		<Y>140</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -44,8 +44,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1762027700518</Id>
 		<Name><![CDATA[naturalImmunity]]></Name>
-		<X>525</X>
-		<Y>390</Y>
+		<X>570</X>
+		<Y>380</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -64,32 +64,10 @@
 		</Properties>
 	</Variable>
 	<Variable Class="PlainVariable">
-		<Id>1762029348457</Id>
-		<Name><![CDATA[vaccinationRate]]></Name>
-		<X>40</X>
-		<Y>440</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true"
-              Constant="false"
-              AccessType="public"
-              StaticVariable="false">
-			<Type><![CDATA[double]]></Type>
-			<InitialValue Class="CodeValue">
-				<Code><![CDATA[main.initialVaccinationRate - main.initialVaccineHesitancy]]></Code>
-			</InitialValue>
-		</Properties>
-	</Variable>
-	<Variable Class="PlainVariable">
 		<Id>1762029536975</Id>
 		<Name><![CDATA[fearLevel]]></Name>
-		<X>40</X>
-		<Y>405</Y>
+		<X>30</X>
+		<Y>230</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -110,8 +88,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1762031820640</Id>
 		<Name><![CDATA[vaccineImmunity]]></Name>
-		<X>525</X>
-		<Y>445</Y>
+		<X>570</X>
+		<Y>410</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -130,29 +108,10 @@
 		</Properties>
 	</Variable>
 	<Variable Class="PlainVariable">
-		<Id>1762032527573</Id>
-		<Name><![CDATA[perceivedFearLevel]]></Name>
-		<X>40</X>
-		<Y>510</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true"
-              Constant="false"
-              AccessType="public"
-              StaticVariable="false">
-			<Type><![CDATA[double]]></Type>
-		</Properties>
-	</Variable>
-	<Variable Class="PlainVariable">
 		<Id>1762033065630</Id>
-		<Name><![CDATA[infectionProbability]]></Name>
-		<X>35</X>
-		<Y>140</Y>
+		<Name><![CDATA[infectionRate]]></Name>
+		<X>30</X>
+		<Y>120</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -167,6 +126,50 @@
 			<Type><![CDATA[double]]></Type>
 			<InitialValue Class="CodeValue">
 				<Code><![CDATA[1.0]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1762151091833</Id>
+		<Name><![CDATA[vaccinationRate]]></Name>
+		<X>410</X>
+		<Y>410</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[double]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[main.initialVaccinationRate - main.initialVaccineHesitancy]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1762154909887</Id>
+		<Name><![CDATA[vaccineMandateAffected]]></Name>
+		<X>410</X>
+		<Y>480</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[boolean]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[false]]></Code>
 			</InitialValue>
 		</Properties>
 	</Variable>

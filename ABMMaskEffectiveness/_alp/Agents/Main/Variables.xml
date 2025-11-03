@@ -44,6 +44,28 @@
 			</InitialValue>
 		</Properties>
 	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1762154334887</Id>
+		<Name><![CDATA[modelStartDay]]></Name>
+		<X>-400</X>
+		<Y>360</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[double]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[getDayOfYear(date())]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
 	<Variable Class="Parameter">
 		<Id>1762015048837</Id>
 		<Name><![CDATA[maskEffectiveness]]></Name>
@@ -60,6 +82,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[0.56]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048835</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -153,7 +178,6 @@
 	<Variable Class="Parameter">
 		<Id>1762015048854</Id>
 		<Name><![CDATA[initialMaskAdoptionRate]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
 		<X>-410</X>
 		<Y>1080</Y>
 		<Label>
@@ -167,6 +191,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[0.05]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048852</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -258,10 +285,9 @@
 	</Variable>
 	<Variable Class="Parameter">
 		<Id>1762015048874</Id>
-		<Name><![CDATA[maskMandateInducedAdoptionIncreaseRate]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
+		<Name><![CDATA[maskMandateInducedAdoptionRateIncrease]]></Name>
 		<X>-410</X>
-		<Y>1190</Y>
+		<Y>1180</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -273,6 +299,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[0.25]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048872</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -287,7 +316,7 @@
 		<Name><![CDATA[networkType]]></Name>
 		<ExcludeFromBuild>true</ExcludeFromBuild>
 		<X>-410</X>
-		<Y>1250</Y>
+		<Y>1240</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -381,6 +410,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[10]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048896</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -406,6 +438,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[0.1]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048900</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -512,6 +547,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[0.01]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048916</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -524,7 +562,6 @@
 	<Variable Class="Parameter">
 		<Id>1762015048922</Id>
 		<Name><![CDATA[vaccineMandateStartDay]]></Name>
-		<ExcludeFromBuild>true</ExcludeFromBuild>
 		<X>-410</X>
 		<Y>760</Y>
 		<Label>
@@ -538,6 +575,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[vaccineAvailabilityDay+5]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048920</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -564,7 +604,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[100]]></Code>
+				<Code><![CDATA[50000]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048924</Id>
@@ -596,6 +636,62 @@
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762017198557</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1762075076995</Id>
+		<Name><![CDATA[maskMandate]]></Name>
+		<X>-410</X>
+		<Y>1210</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[boolean]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[false]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1762075076993</Id>
+				<EditorContolType>CHECK_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1762154685751</Id>
+		<Name><![CDATA[vaccineMandateInducedAdoptionRateIncrease]]></Name>
+		<X>-410</X>
+		<Y>1020</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[0.25]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1762154685749</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
 				<MinSliderValue>0</MinSliderValue>
 				<MaxSliderValue>100</MaxSliderValue>

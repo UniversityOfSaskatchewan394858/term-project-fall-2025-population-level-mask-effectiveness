@@ -3,8 +3,8 @@
 	<EmbeddedObject>
 		<Id>1762017763596</Id>
 		<Name><![CDATA[People]]></Name>
-		<X>-590</X>
-		<Y>510</Y>
+		<X>-190</X>
+		<Y>410</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -30,6 +30,69 @@
 			<Code><![CDATA[startingPopulation]]></Code>
 		</Replication>
 		<CollectionType>ARRAY_LIST_BASED</CollectionType>
+		<StatisticsItem>
+			<Id>1762072220499</Id>
+			<Name><![CDATA[Susceptible]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isSusceptible()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
+			<Id>1762073184934</Id>
+			<Name><![CDATA[Exposed]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isExposed()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
+			<Id>1762073219455</Id>
+			<Name><![CDATA[Infective]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isInfective()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
+			<Id>1762073232316</Id>
+			<Name><![CDATA[Recovered]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isRecovered()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
+			<Id>1762073311989</Id>
+			<Name><![CDATA[VaccinatedRecovered]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isVaccinatedRecovered()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
+			<Id>1762073373448</Id>
+			<Name><![CDATA[Vaccinated]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isVaccinated()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
+			<Id>1762073985822</Id>
+			<Name><![CDATA[Dead]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isDead()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
+			<Id>1762077408811</Id>
+			<Name><![CDATA[Unmasked]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isUnmasked()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
+			<Id>1762077429234</Id>
+			<Name><![CDATA[Masked]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isMasked()</Condition>
+		</StatisticsItem>
 		<InEnvironment>true</InEnvironment>
 		<InitialSpeedCode Class="CodeUnitValue">
 			<Code><![CDATA[agentSpeed]]></Code>

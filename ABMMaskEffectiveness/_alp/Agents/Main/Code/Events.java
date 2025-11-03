@@ -8,3 +8,8 @@ void initialInfectionEvent()
 sendToRandomAgentInside("InitialInfect");
 /*ALCODEEND*/}
 
+void checkInfectionNumber()
+{/*ALCODESTART::1762121326766*/
+traceln("Infected surpassed susceptibles on day: " + time());
+/*ALCODEEND*/}
+
