@@ -14,12 +14,12 @@
 		<ShowLabel>true</ShowLabel>
 		<PresentationId>1762017763598</PresentationId>
 		<ActiveObjectClass>
-			<PackageName>abmmaskeffectiveness</PackageName>
+			<PackageName>abmmaskeffectivenessv1</PackageName>
 			<ClassName>Person</ClassName>
 		</ActiveObjectClass>
 		<GenericParameterSubstitute>
 			<GenericParameterSubstituteReference>
-				<PackageName>abmmaskeffectiveness</PackageName>
+				<PackageName>abmmaskeffectivenessv1</PackageName>
 				<ClassName>Person</ClassName>
 				<ItemName>1762016715637</ItemName>
 			</GenericParameterSubstituteReference>
