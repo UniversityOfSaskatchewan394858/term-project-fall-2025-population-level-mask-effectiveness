@@ -2,6 +2,32 @@
 <ActiveObjectClass>
 	<Id>1762014522365</Id>
 	<Name><![CDATA[Main]]></Name>
+	<StartupCode><![CDATA[// Disconnect all starting networks
+for (Person p : People) {
+	p.disconnectFromAll(); ;
+}
+
+switch (networkType.toLowerCase()) {
+	case ("distance-based"):
+		setNetworkAllInRange(distanceBasedConnectionRange);
+		break;
+		
+	case ("random"):
+		setNetworkRandom(randomConnectionsPerAgent);
+		break;
+		
+	case ("ring lattice"):
+		setNetworkRingLattice(ringLatticeConnectionsPerAgent);
+		break;
+		
+	case ("small-world"):
+		setNetworkSmallWorld(smallWorldConnectionsPerAgent, smallWorldNeighborLinkFraction);
+		break;
+		
+	case ("scale-free"):
+		setNetworkScaleFree(scaleFreeM);
+		break;
+}]]></StartupCode>
 	<Generic>false</Generic>
 	<GenericParameter>
 		<Id>1762014522370</Id>
@@ -54,7 +80,7 @@
 		<RowsCountCode>100</RowsCountCode>
 		<NeigborhoodType>MOORE</NeigborhoodType>
 		<LayoutType>USER_DEF</LayoutType>
-		<NetworkType>DISTANCE_BASED</NetworkType>
+		<NetworkType>USER_DEF</NetworkType>
 		<ConnectionsPerAgentCode>2</ConnectionsPerAgentCode>
 		<ConnectionsRangeCode>50</ConnectionsRangeCode>
 		<NeighborLinkFractionCode>0.95</NeighborLinkFractionCode>

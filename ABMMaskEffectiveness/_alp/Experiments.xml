@@ -111,6 +111,24 @@
 			<Parameter>
 				<ParameterName>initialInfectiveCount</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>distanceBasedConnectionRange</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>ringLatticeConnectionsPerAgent</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>randomConnectionsPerAgent</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>smallWorldConnectionsPerAgent</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>smallWorldNeighborLinkFraction</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>scaleFreeM</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -239,6 +257,24 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>initialInfectiveCount</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>distanceBasedConnectionRange</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>ringLatticeConnectionsPerAgent</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>randomConnectionsPerAgent</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>smallWorldConnectionsPerAgent</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>smallWorldNeighborLinkFraction</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>scaleFreeM</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
