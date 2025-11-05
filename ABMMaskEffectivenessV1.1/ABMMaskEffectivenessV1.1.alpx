@@ -5,7 +5,7 @@
                    AlpVersion="8.9.6">
 	<Model>
 		<Id>1762014522361</Id>
-		<Name><![CDATA[ABMMaskEffectivenessV1.1]]></Name>
+		<Name><![CDATA[ABMMaskEffectivenessV1]]></Name>
 		<EngineVersion>6</EngineVersion>
 		<JavaPackageName><![CDATA[abmmaskeffectivenessV1point1]]></JavaPackageName>
 		<ModelTimeUnit>Day</ModelTimeUnit>
