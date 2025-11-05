@@ -148,7 +148,7 @@
 		<Id>1762307169207</Id>
 		<Name><![CDATA[No_Mask_Scenario]]></Name>
 		<CommandLineArguments/>
-		<MaximumMemory>512</MaximumMemory>
+		<MaximumMemory>2048</MaximumMemory>
 		<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 		<SeedValue>1</SeedValue>
