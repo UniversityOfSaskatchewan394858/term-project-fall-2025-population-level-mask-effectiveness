@@ -38,6 +38,13 @@
 			<Condition>agent.isSusceptible()</Condition>
 		</StatisticsItem>
 		<StatisticsItem>
+			<Id>1763932977247</Id>
+			<Name><![CDATA[Susceptible1]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isSusceptible()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
 			<Id>1762073184934</Id>
 			<Name><![CDATA[Exposed]]></Name>
 			<Type><![CDATA[count]]></Type>
@@ -92,6 +99,41 @@
 			<Type><![CDATA[count]]></Type>
 			<Expression/>
 			<Condition>agent.isMasked()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
+			<Id>1763933075821</Id>
+			<Name><![CDATA[Calm]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isCalm()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
+			<Id>1763933095600</Id>
+			<Name><![CDATA[Aware]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isAware()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
+			<Id>1763933118596</Id>
+			<Name><![CDATA[Worried]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isWorried()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
+			<Id>1763933136294</Id>
+			<Name><![CDATA[Afraid]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isAfraid()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
+			<Id>1763933160276</Id>
+			<Name><![CDATA[Panic]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isPanic()</Condition>
 		</StatisticsItem>
 		<InEnvironment>true</InEnvironment>
 		<InitialSpeedCode Class="CodeUnitValue">
