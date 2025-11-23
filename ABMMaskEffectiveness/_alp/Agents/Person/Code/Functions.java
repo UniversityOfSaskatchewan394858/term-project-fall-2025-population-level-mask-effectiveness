@@ -141,3 +141,51 @@ if (inState(Dead) == false) {
 }
 /*ALCODEEND*/}
 
+boolean isCalm()
+{/*ALCODESTART::1763932216147*/
+return this.inState(Calm);
+/*ALCODEEND*/}
+
+boolean isAware()
+{/*ALCODESTART::1763932216149*/
+return this.inState(Aware);
+/*ALCODEEND*/}
+
+boolean isWorried()
+{/*ALCODESTART::1763932216151*/
+return this.inState(Worried);
+/*ALCODEEND*/}
+
+boolean isAfraid()
+{/*ALCODESTART::1763932216153*/
+return this.inState(Afraid);
+/*ALCODEEND*/}
+
+boolean isPanic()
+{/*ALCODESTART::1763932216155*/
+return this.inState(Panic);
+/*ALCODEEND*/}
+
+List<Person> getNeighbors(double radius)
+{/*ALCODESTART::1763932350795*/
+List<Person> neighbors = new ArrayList<>();
+
+// Iterate over all agents in the population
+for (Person p : main.People) { 
+    if (p != this) { // does not include this agent
+    	
+    	// Computes distance between agents
+        double dx = this.getX() - p.getX();
+        double dy = this.getY() - p.getY();
+        double distance = Math.sqrt(dx*dx + dy*dy);
+		
+		// If agent is within range add to list
+        if (distance <= radius) {
+            neighbors.add(p);
+        }
+    }
+}
+
+return neighbors;
+/*ALCODEEND*/}
+

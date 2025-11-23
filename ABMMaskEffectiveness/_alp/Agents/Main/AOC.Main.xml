@@ -27,6 +27,12 @@ switch (networkType.toLowerCase()) {
 	case ("scale-free"):
 		setNetworkScaleFree(scaleFreeM);
 		break;
+		
+	default:
+        // Default network if networkType is invalid
+        setNetworkAllInRange(distanceBasedConnectionRange);
+        System.out.println("Invalid networkType; defaulting to distance-based network.");
+        break;
 }]]></StartupCode>
 	<Generic>false</Generic>
 	<GenericParameter>
