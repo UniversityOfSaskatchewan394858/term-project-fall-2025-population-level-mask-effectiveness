@@ -41,6 +41,9 @@
 		<Parameters>
 			<Parameter>
 				<ParameterName>maskEffectiveness</ParameterName>
+				<ParameterValue Class="CodeValue">
+					<Code><![CDATA[0]]></Code>
+				</ParameterValue>
 			</Parameter>
 			<Parameter>
 				<ParameterName>populationDensity</ParameterName>
@@ -53,9 +56,15 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>initialMaskAdoptionRate</ParameterName>
+				<ParameterValue Class="CodeValue">
+					<Code><![CDATA[0]]></Code>
+				</ParameterValue>
 			</Parameter>
 			<Parameter>
 				<ParameterName>fearInducedMaskAdoptionIncreaseRate</ParameterName>
+				<ParameterValue Class="CodeValue">
+					<Code><![CDATA[0]]></Code>
+				</ParameterValue>
 			</Parameter>
 			<Parameter>
 				<ParameterName>popularityInducedMaskAdoptionIncreaseRate</ParameterName>
@@ -65,6 +74,9 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>maskMandateInducedAdoptionRateIncrease</ParameterName>
+				<ParameterValue Class="CodeValue">
+					<Code><![CDATA[0]]></Code>
+				</ParameterValue>
 			</Parameter>
 			<Parameter>
 				<ParameterName>networkType</ParameterName>
@@ -74,6 +86,9 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>maskMandateStartDay</ParameterName>
+				<ParameterValue Class="CodeValue">
+					<Code><![CDATA[9999]]></Code>
+				</ParameterValue>
 			</Parameter>
 			<Parameter>
 				<ParameterName>vaccineAvailabilityDay</ParameterName>
