@@ -24,7 +24,7 @@
 		<ReturnModificator>VOID</ReturnModificator>
 		<ReturnType>double</ReturnType>
 		<Id>1762029287107</Id>
-		<Name><![CDATA[getVaccination]]></Name>
+		<Name><![CDATA[considerVaccination]]></Name>
 		<X>410</X>
 		<Y>390</Y>
 		<Label>
@@ -200,7 +200,7 @@
 		<ReturnModificator>VOID</ReturnModificator>
 		<ReturnType>double</ReturnType>
 		<Id>1762215634275</Id>
-		<Name><![CDATA[adoptMask]]></Name>
+		<Name><![CDATA[considerMasking]]></Name>
 		<X>765</X>
 		<Y>455</Y>
 		<Label>

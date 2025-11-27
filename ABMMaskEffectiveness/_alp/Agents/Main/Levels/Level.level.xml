@@ -100,7 +100,7 @@
 		</DataItem>
 		<DataItem>
 			<Id>1762027138603</Id>
-			<Expression>People.Dead()</Expression>
+			<Expression>deadAgentCount</Expression>
 			<Color>-8355712</Color>
 			<Title>Dead</Title>
 		</DataItem>
@@ -224,7 +224,7 @@
 			<Id>1762073714887</Id>
 			<Expression>my_dataset3</Expression>
 			<Color>-8355712</Color>
-			<Expression2>People.Dead()</Expression2>
+			<Expression2>deadAgentCount</Expression2>
 			<Expression2Flag>true</Expression2Flag>
 			<PointStyle>NONE</PointStyle>
 			<LineWidth>1.0</LineWidth>
@@ -760,7 +760,7 @@ traceln("Vaccine mandate applied on day: " + time());</ActionCode>
 	</TimePlot>
 	<BarChart>
 		<Id>1763932828996</Id>
-		<Name><![CDATA[chart2]]></Name>
+		<Name><![CDATA[FearLevelChart]]></Name>
 		<X>270</X>
 		<Y>-1460</Y>
 		<Label>

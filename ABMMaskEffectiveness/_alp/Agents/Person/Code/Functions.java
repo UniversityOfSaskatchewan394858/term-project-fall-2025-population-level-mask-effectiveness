@@ -47,14 +47,14 @@ else {
 }
 /*ALCODEEND*/}
 
-double getVaccination()
+double considerVaccination()
 {/*ALCODESTART::1762029287107*/
 // If vaccinations are available at current day
 if (main.vaccineMandateInEffect || (time() >= main.vaccineAvailabilityDay)) {
-	// If vaccine mandate is in effect, increases vaccination rate
+	// If vaccine mandate is in effect, enables increase of vaccination rate
 	if (time() >= main.vaccineMandateStartDay) {
 		if (vaccineMandateAffected == false) {
-			vaccinationRate += main.vaccineMandateInducedAdoptionRateIncrease;
+			vaccinationRate += main.vaccineMandateInducedAdoptionRateIncrease
 			vaccineMandateAffected = true;
 			main.vaccineMandateInEffect = true;
 		}
@@ -123,10 +123,10 @@ boolean isMasked()
 return this.inState(Masked);
 /*ALCODEEND*/}
 
-double adoptMask()
+double considerMasking()
 {/*ALCODESTART::1762215634275*/
 if (inState(Dead) == false) {
-	// If mask mandate is in effect, increases mask adotpion rate
+	// If mask mandate is in effect, enable increase of mask adotpion rate
 	if (main.maskMandateInEffect || (time() >= main.maskMandateStartDay)) {
 		if (maskMandateAffected == false) {
 			maskAdoptionRate += main.maskMandateInducedAdoptionRateIncrease;
