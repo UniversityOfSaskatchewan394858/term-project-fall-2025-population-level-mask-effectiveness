@@ -1908,22 +1908,22 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 			<AgentLinkBidirectional>true</AgentLinkBidirectional>
 			<MessageType>String</MessageType>
 			<StatechartReference>
-				<PackageName>abmmaskeffectiveness</PackageName>
+				<PackageName>abmmaskeffectivenessdev</PackageName>
 				<ClassName>Person</ClassName>
 				<ItemName>InfectionStatechart</ItemName>
 			</StatechartReference>
 			<StatechartReference>
-				<PackageName>abmmaskeffectiveness</PackageName>
+				<PackageName>abmmaskeffectivenessdev</PackageName>
 				<ClassName>Person</ClassName>
 				<ItemName>MobilityStatechart</ItemName>
 			</StatechartReference>
 			<StatechartReference>
-				<PackageName>abmmaskeffectiveness</PackageName>
+				<PackageName>abmmaskeffectivenessdev</PackageName>
 				<ClassName>Person</ClassName>
 				<ItemName>maskingStatechart</ItemName>
 			</StatechartReference>
 			<StatechartReference>
-				<PackageName>abmmaskeffectiveness</PackageName>
+				<PackageName>abmmaskeffectivenessdev</PackageName>
 				<ClassName>Person</ClassName>
 				<ItemName>FearStatechart</ItemName>
 			</StatechartReference>
@@ -1950,7 +1950,7 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<ActiveObjectClass>
-				<PackageName>abmmaskeffectiveness</PackageName>
+				<PackageName>abmmaskeffectivenessdev</PackageName>
 				<ClassName>Main</ClassName>
 			</ActiveObjectClass>
 		</ContainerLink>
