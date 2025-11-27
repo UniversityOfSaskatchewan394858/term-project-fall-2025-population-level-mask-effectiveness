@@ -1,6 +1,6 @@
 boolean infectionTransmitted(Person infector)
 {/*ALCODESTART::1762022249895*/
-double baseInfectionRate = infectionRate;
+double infectionRate = 1.0;
 String immunityState;
 
 // Checks if agent is masked
@@ -11,16 +11,13 @@ if (inState(Masked)) {
 // Checks if agent has any form of immunity
 if (inState(VaccinatedRecovered)) { 
 	infectionRate = infectionRate * 
-		(1.0 - ((1.0 +naturalImmunity) * (1.0+vaccineImmunity)));
-	immunityState = new String("VaccinatedRecovered");
+		(1.0 - ((1.0+naturalImmunity) * (1.0+vaccineImmunity)));
 }
 else if (inState(Vaccinated)) {
 	infectionRate *= (1.0 - vaccineImmunity);
-	immunityState = new String("Vaccinated");
 }
 else if (inState(Recovered)) {
 	infectionRate *= (1.0 - naturalImmunity);
-	immunityState = new String("Recovered");
 }
 
 // Checks if infector is masked
@@ -31,7 +28,6 @@ if (infector.inState(Person.Masked)) {
 
 if (randomTrue(infectionRate)) {
 	send("InfectionTransmitted", this);
-	infectionRate = baseInfectionRate;
 	return true;
 }
 else {
@@ -49,19 +45,18 @@ else {
 
 double considerVaccination()
 {/*ALCODESTART::1762029287107*/
-// If vaccinations are available at current day
-if (main.vaccineMandateInEffect || (time() >= main.vaccineAvailabilityDay)) {
-	// If vaccine mandate is in effect, enables increase of vaccination rate
-	if (time() >= main.vaccineMandateStartDay) {
-		if (vaccineMandateAffected == false) {
-			vaccinationRate += main.vaccineMandateInducedAdoptionRateIncrease
-			vaccineMandateAffected = true;
-			main.vaccineMandateInEffect = true;
-		}
-	}
-
+// If vaccinations are available at the current day
+if (time() >= main.vaccineAvailabilityDay) {
 	if (main.availableVaccinations > 0) {
-		//if (uniform(0, 1.0) <= vaccinationRate) {
+		double vaccinationRate = main.initialVaccinationRate - main.initialVaccineHesitancy; 
+		// Increase with fear level
+		vaccinationRate += ((fearLevel * 100) * main.fearInducedVaccinationAcceptanceIncreaseRate);
+	
+		// Increase if vaccine mandate is in effect
+		if (time() >= main.vaccineMandateStartDay) {
+			vaccinationRate += main.vaccineMandateInducedAdoptionRateIncrease;
+		}
+
 		if (randomTrue(vaccinationRate)) {
 			main.availableVaccinations -= 1;
 			send("Vaccinate", this);
@@ -105,14 +100,6 @@ boolean isVaccinated()
 return this.inState(Vaccinated);
 /*ALCODEEND*/}
 
-double getMaskEffectiveness()
-{/*ALCODESTART::1762074225605*/
-if(this.inState(Masked))
-	return main.maskEffectiveness;
-else
-	return 0.0;
-/*ALCODEEND*/}
-
 boolean isUnmasked()
 {/*ALCODESTART::1762077271194*/
 return this.inState(Unmasked);
@@ -125,19 +112,20 @@ return this.inState(Masked);
 
 double considerMasking()
 {/*ALCODESTART::1762215634275*/
-if (inState(Dead) == false) {
-	// If mask mandate is in effect, enable increase of mask adotpion rate
-	if (main.maskMandateInEffect || (time() >= main.maskMandateStartDay)) {
-		if (maskMandateAffected == false) {
-			maskAdoptionRate += main.maskMandateInducedAdoptionRateIncrease;
-			maskMandateAffected = true;
-			main.maskMandateInEffect = true;
-		}
-	}
-	
-	if (randomTrue(maskAdoptionRate)) {
-		send("Mask", this);
-	}
+double maskAdoptionRate = main.initialMaskAdoptionRate;
+// Increase with fear level
+maskAdoptionRate += ((fearLevel * 100) * main.fearInducedMaskAdoptionIncreaseRate);
+// Increase with popularity
+maskAdoptionRate += ((main.maskPopularity * 100) * main.popularityInducedMaskAdoptionIncreaseRate);
+
+// Increase if mask mandate is in effect
+if ((time() >= main.maskMandateStartDay)) {
+		maskAdoptionRate += main.maskMandateInducedAdoptionRateIncrease;
+}
+
+
+if (randomTrue(maskAdoptionRate)) {
+	send("Mask", this);
 }
 /*ALCODEEND*/}
 
@@ -187,5 +175,27 @@ for (Person p : main.People) {
 }
 
 return neighbors;
+/*ALCODEEND*/}
+
+double considerUnmasking()
+{/*ALCODESTART::1764261026564*/
+// This uses randomFalse() instead of randomTrue() to determine
+// if the agent should unmask or not
+
+double maskAdoptionRate = main.initialMaskAdoptionRate;
+// Increase with fear level
+maskAdoptionRate += ((fearLevel * 100) * main.fearInducedMaskAdoptionIncreaseRate);
+// Increase with popularity
+maskAdoptionRate += ((main.maskPopularity * 100) * main.popularityInducedMaskAdoptionIncreaseRate);
+
+// Increase if mask mandate is in effect
+if ((time() >= main.maskMandateStartDay)) {
+		maskAdoptionRate += main.maskMandateInducedAdoptionRateIncrease;
+}
+
+
+if (randomFalse(maskAdoptionRate)) {
+	send("Unmask", this);
+}
 /*ALCODEEND*/}
 

@@ -282,7 +282,7 @@
 			<EmbeddedIcon>false</EmbeddedIcon>
 			<TextColor>-16777216</TextColor>
 			<Enabled>true</Enabled>
-			<ActionCode>maskMandateInEffect = true;
+			<ActionCode>maskMandateStartDay = time();
 traceln("Mask mandate applied on day: " + time());</ActionCode>
 		</BasicProperties>
 		<ExtendedProperties>
@@ -558,7 +558,7 @@ traceln("Mask mandate applied on day: " + time());</ActionCode>
 			<EmbeddedIcon>false</EmbeddedIcon>
 			<TextColor>-16777216</TextColor>
 			<Enabled>true</Enabled>
-			<ActionCode>vaccineMandateInEffect = true;
+			<ActionCode>vaccineMandateStartDay = time();
 traceln("Vaccine mandate applied on day: " + time());</ActionCode>
 		</BasicProperties>
 		<ExtendedProperties>
