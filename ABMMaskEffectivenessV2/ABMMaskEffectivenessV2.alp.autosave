@@ -4346,6 +4346,9 @@ traceln("Vaccine mandate applied on day: " + time());]]></ActionCode>
 			<Parameters>
 				<Parameter>
 					<ParameterName><![CDATA[maskEffectiveness]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[populationDensity]]></ParameterName>
@@ -4358,9 +4361,15 @@ traceln("Vaccine mandate applied on day: " + time());]]></ActionCode>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[initialMaskAdoptionRate]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[fearInducedMaskAdoptionIncreaseRate]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[popularityInducedMaskAdoptionIncreaseRate]]></ParameterName>
@@ -4370,6 +4379,9 @@ traceln("Vaccine mandate applied on day: " + time());]]></ActionCode>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[maskMandateInducedAdoptionRateIncrease]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[networkType]]></ParameterName>
@@ -4379,9 +4391,15 @@ traceln("Vaccine mandate applied on day: " + time());]]></ActionCode>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[maskMandateStartDay]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[9999]]></Code>
+					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[vaccineAvailabilityDay]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[9999]]></Code>
+					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[initialVaccinationRate]]></ParameterName>

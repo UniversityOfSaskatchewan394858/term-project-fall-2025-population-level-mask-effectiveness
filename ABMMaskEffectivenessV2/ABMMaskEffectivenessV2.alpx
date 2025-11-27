@@ -7,7 +7,7 @@
 		<Id>1762014522361</Id>
 		<Name><![CDATA[ABMMaskEffectivenessV2]]></Name>
 		<EngineVersion>6</EngineVersion>
-		<JavaPackageName><![CDATA[abmmaskeffectiveness]]></JavaPackageName>
+		<JavaPackageName><![CDATA[abmmaskeffectivenessv2]]></JavaPackageName>
 		<ModelTimeUnit>Day</ModelTimeUnit>
 		<Folders/>
 		<ActiveObjectClasses/>
