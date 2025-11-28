@@ -459,7 +459,7 @@ traceln("Mask mandate applied on day: " + time());</ActionCode>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>false</ShowLabel>
 		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-		<AutoUpdate>true</AutoUpdate>
+		<AutoUpdate>false</AutoUpdate>
 		<RecurrenceProperties>
 			<Id>1762192869472</Id>
 			<OccurrenceAtTime>true</OccurrenceAtTime>
@@ -506,32 +506,32 @@ traceln("Mask mandate applied on day: " + time());</ActionCode>
 		<DrawLine>true</DrawLine>
 		<Interpolation>LINEAR</Interpolation>
 		<DatasetExpression>
-			<Title>Cumulative count of incident infections</Title>
+			<Title>Count of incident infections</Title>
 			<Id>1762192870163</Id>
-			<Expression>my_dataset</Expression>
+			<Expression>incidentInfectionsDS</Expression>
 			<Color>-10496</Color>
-			<Expression2>incidentInfectionCount</Expression2>
-			<Expression2Flag>true</Expression2Flag>
+			<Expression2>incidentInfectionCount.</Expression2>
+			<Expression2Flag>false</Expression2Flag>
 			<PointStyle>NONE</PointStyle>
 			<LineWidth>1.0</LineWidth>
 		</DatasetExpression>
 		<DatasetExpression>
-			<Title>Cumulative count of potential exposures prevented by masking</Title>
+			<Title>Count of potential exposures prevented by masking</Title>
 			<Id>1762192884961</Id>
-			<Expression>my_dataset1</Expression>
+			<Expression>maskingPreventedPotentialExposureCountDS</Expression>
 			<Color>-16744320</Color>
 			<Expression2>maskingPreventedPotentialExposureCount</Expression2>
-			<Expression2Flag>true</Expression2Flag>
+			<Expression2Flag>false</Expression2Flag>
 			<PointStyle>NONE</PointStyle>
 			<LineWidth>1.0</LineWidth>
 		</DatasetExpression>
 		<DatasetExpression>
-			<Title>Cumulative count of potential exposures prevented by vaccines</Title>
+			<Title>Count of potential exposures prevented by vaccines</Title>
 			<Id>1762192885958</Id>
-			<Expression>my_dataset2</Expression>
+			<Expression>vaccinePreventedPotentialExposureCountDS</Expression>
 			<Color>-8388480</Color>
 			<Expression2>vaccinePreventedPotentialExposureCount</Expression2>
-			<Expression2Flag>true</Expression2Flag>
+			<Expression2Flag>false</Expression2Flag>
 			<PointStyle>NONE</PointStyle>
 			<LineWidth>1.0</LineWidth>
 		</DatasetExpression>
