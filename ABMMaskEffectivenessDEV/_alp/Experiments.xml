@@ -55,10 +55,10 @@
 				<ParameterName>initialMaskAdoptionRate</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>fearInducedMaskAdoptionIncreaseRate</ParameterName>
+				<ParameterName>maxFearInducedMaskAdoptionRateIncrease</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>popularityInducedMaskAdoptionIncreaseRate</ParameterName>
+				<ParameterName>maxPopularityInducedMaskAdoptionRateIncrease</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>waningOfVaccineInducedImmunity</ParameterName>
@@ -85,7 +85,7 @@
 				<ParameterName>vaccineEffectiveness</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>fearInducedVaccinationAcceptanceIncreaseRate</ParameterName>
+				<ParameterName>maxFearInducedVaccinationRateIncrease</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>vaccineMandateStartDay</ParameterName>
@@ -202,10 +202,10 @@
 				<ParameterName>initialMaskAdoptionRate</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>fearInducedMaskAdoptionIncreaseRate</ParameterName>
+				<ParameterName>maxFearInducedMaskAdoptionRateIncrease</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>popularityInducedMaskAdoptionIncreaseRate</ParameterName>
+				<ParameterName>maxPopularityInducedMaskAdoptionRateIncrease</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>waningOfVaccineInducedImmunity</ParameterName>
@@ -238,7 +238,7 @@
 				<ParameterName>infectiveRecoveryRate</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>fearInducedVaccinationAcceptanceIncreaseRate</ParameterName>
+				<ParameterName>maxFearInducedVaccinationRateIncrease</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>vaccineMandateStartDay</ParameterName>

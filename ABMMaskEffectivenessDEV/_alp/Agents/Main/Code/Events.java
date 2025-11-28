@@ -17,6 +17,6 @@ traceln("Infected surpassed susceptibles on day: " + time());
 
 void updateMaskPopularity()
 {/*ALCODESTART::1762217525125*/
-maskPopularity = (double) People.Masked() / (startingPopulation - People.Dead())
+maskPopularity = (double) People.Masked() / (startingPopulation - deadAgentCount)
 /*ALCODEEND*/}
 

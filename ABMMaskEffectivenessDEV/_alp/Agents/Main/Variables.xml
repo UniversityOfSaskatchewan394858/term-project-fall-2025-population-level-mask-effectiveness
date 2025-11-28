@@ -113,7 +113,7 @@
 	<Variable Class="PlainVariable">
 		<Id>1762217512754</Id>
 		<Name><![CDATA[maskPopularity]]></Name>
-		<X>-630</X>
+		<X>-610</X>
 		<Y>740</Y>
 		<Label>
 			<X>10</X>
@@ -151,6 +151,28 @@
 			<Type><![CDATA[double]]></Type>
 			<InitialValue Class="CodeValue">
 				<Code><![CDATA[0]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1764271708312</Id>
+		<Name><![CDATA[deadAgentIDs]]></Name>
+		<X>140</X>
+		<Y>-210</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[ArrayList<Integer>]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new ArrayList<Integer>()]]></Code>
 			</InitialValue>
 		</Properties>
 	</Variable>
@@ -254,6 +276,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[0.01]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048848</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -293,7 +318,7 @@
 	</Variable>
 	<Variable Class="Parameter">
 		<Id>1762015048858</Id>
-		<Name><![CDATA[fearInducedMaskAdoptionIncreaseRate]]></Name>
+		<Name><![CDATA[maxFearInducedMaskAdoptionRateIncrease]]></Name>
 		<X>-410</X>
 		<Y>710</Y>
 		<Label>
@@ -307,6 +332,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[0.33]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048856</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -318,7 +346,7 @@
 	</Variable>
 	<Variable Class="Parameter">
 		<Id>1762015048862</Id>
-		<Name><![CDATA[popularityInducedMaskAdoptionIncreaseRate]]></Name>
+		<Name><![CDATA[maxPopularityInducedMaskAdoptionRateIncrease]]></Name>
 		<X>-410</X>
 		<Y>740</Y>
 		<Label>
@@ -332,6 +360,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[0.2]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048860</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -620,7 +651,7 @@
 	</Variable>
 	<Variable Class="Parameter">
 		<Id>1762015048918</Id>
-		<Name><![CDATA[fearInducedVaccinationAcceptanceIncreaseRate]]></Name>
+		<Name><![CDATA[maxFearInducedVaccinationRateIncrease]]></Name>
 		<X>-410</X>
 		<Y>1020</Y>
 		<Label>
@@ -635,7 +666,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.01]]></Code>
+				<Code><![CDATA[0.33]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048916</Id>

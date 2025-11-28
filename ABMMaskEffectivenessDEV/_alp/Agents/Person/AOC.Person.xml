@@ -184,8 +184,8 @@ main.incidentInfectionCount += 1;</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1762017090664</Id>
 			<Name><![CDATA[moving]]></Name>
-			<X>450</X>
-			<Y>555</Y>
+			<X>780</X>
+			<Y>560</Y>
 			<Label>
 				<X>11</X>
 				<Y>15</Y>
@@ -221,8 +221,8 @@ main.incidentInfectionCount += 1;</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1762022330569</Id>
 			<Name><![CDATA[Unmasked]]></Name>
-			<X>790</X>
-			<Y>290</Y>
+			<X>420</X>
+			<Y>520</Y>
 			<Label>
 				<X>5</X>
 				<Y>15</Y>
@@ -238,8 +238,8 @@ main.incidentInfectionCount += 1;</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1762022349763</Id>
 			<Name><![CDATA[Masked]]></Name>
-			<X>790</X>
-			<Y>380</Y>
+			<X>420</X>
+			<Y>610</Y>
 			<Label>
 				<X>15</X>
 				<Y>15</Y>
@@ -255,8 +255,8 @@ main.incidentInfectionCount += 1;</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1763932216157</Id>
 			<Name><![CDATA[Calm]]></Name>
-			<X>1190</X>
-			<Y>50</Y>
+			<X>60</X>
+			<Y>480</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -271,8 +271,8 @@ main.incidentInfectionCount += 1;</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1763932216159</Id>
 			<Name><![CDATA[Aware]]></Name>
-			<X>1190</X>
-			<Y>130</Y>
+			<X>60</X>
+			<Y>560</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -287,8 +287,8 @@ main.incidentInfectionCount += 1;</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1763932216161</Id>
 			<Name><![CDATA[Worried]]></Name>
-			<X>1190</X>
-			<Y>210</Y>
+			<X>60</X>
+			<Y>640</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -303,8 +303,8 @@ main.incidentInfectionCount += 1;</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1763932216163</Id>
 			<Name><![CDATA[Afraid]]></Name>
-			<X>1190</X>
-			<Y>290</Y>
+			<X>60</X>
+			<Y>720</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -319,8 +319,8 @@ main.incidentInfectionCount += 1;</EntryAction>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
 			<Id>1763932216165</Id>
 			<Name><![CDATA[Panic]]></Name>
-			<X>1190</X>
-			<Y>370</Y>
+			<X>60</X>
+			<Y>800</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -346,6 +346,7 @@ main.incidentInfectionCount += 1;</EntryAction>
 			<ShowLabel>true</ShowLabel>
 			<Properties>
 				<Action>main.deadAgentCount++;
+main.deadAgentIDs.add(ID);
 deleteSelf();</Action>
 			</Properties>
 		</StatechartElement>
@@ -685,10 +686,10 @@ deleteSelf();</Action>
 		<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 			<Id>1762017090668</Id>
 			<Name><![CDATA[MobilityStatechart]]></Name>
-			<X>370</X>
-			<Y>570</Y>
+			<X>830</X>
+			<Y>485</Y>
 			<Label>
-				<X>-70</X>
+				<X>-50</X>
 				<Y>-30</Y>
 			</Label>
 			<PublicFlag>false</PublicFlag>
@@ -700,8 +701,8 @@ deleteSelf();</Action>
 					<Y>0</Y>
 				</Point>
 				<Point>
-					<X>80</X>
-					<Y>0</Y>
+					<X>0</X>
+					<Y>75</Y>
 				</Point>
 			</Points>
 			<Properties Target="1762017090664"/>
@@ -709,8 +710,8 @@ deleteSelf();</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1762017090670</Id>
 			<Name><![CDATA[arrival]]></Name>
-			<X>550</X>
-			<Y>575</Y>
+			<X>880</X>
+			<Y>580</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -736,7 +737,7 @@ deleteSelf();</Action>
 					<Y>-10</Y>
 				</Point>
 			</Points>
-			<IconOffset>20.0</IconOffset>
+			<IconOffset>30.0</IconOffset>
 			<Properties Source="1762017090664" Target="1762017090664" Trigger="arrival">
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
@@ -884,8 +885,8 @@ deleteSelf();</Action>
 		<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 			<Id>1762022311381</Id>
 			<Name><![CDATA[maskingStatechart]]></Name>
-			<X>840</X>
-			<Y>250</Y>
+			<X>470</X>
+			<Y>480</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1413,8 +1414,8 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1762216983161</Id>
 			<Name><![CDATA[transition]]></Name>
-			<X>855</X>
-			<Y>320</Y>
+			<X>485</X>
+			<Y>550</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1454,8 +1455,8 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1762217006343</Id>
 			<Name><![CDATA[transition1]]></Name>
-			<X>890</X>
-			<Y>310</Y>
+			<X>520</X>
+			<Y>540</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1503,8 +1504,8 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1762219408929</Id>
 			<Name><![CDATA[transition2]]></Name>
-			<X>815</X>
-			<Y>380</Y>
+			<X>445</X>
+			<Y>610</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1543,8 +1544,8 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1763932216167</Id>
 			<Name><![CDATA[transition3]]></Name>
-			<X>1230</X>
-			<Y>80</Y>
+			<X>100</X>
+			<Y>510</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1583,8 +1584,8 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1763932216169</Id>
 			<Name><![CDATA[transition5]]></Name>
-			<X>1230</X>
-			<Y>160</Y>
+			<X>100</X>
+			<Y>590</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1623,8 +1624,8 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1763932216171</Id>
 			<Name><![CDATA[transition6]]></Name>
-			<X>1230</X>
-			<Y>240</Y>
+			<X>100</X>
+			<Y>670</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1663,8 +1664,8 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1763932216173</Id>
 			<Name><![CDATA[transition7]]></Name>
-			<X>1230</X>
-			<Y>320</Y>
+			<X>100</X>
+			<Y>750</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1703,8 +1704,8 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1763932216175</Id>
 			<Name><![CDATA[transition8]]></Name>
-			<X>1250</X>
-			<Y>130</Y>
+			<X>120</X>
+			<Y>560</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1743,8 +1744,8 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1763932216177</Id>
 			<Name><![CDATA[transition9]]></Name>
-			<X>1250</X>
-			<Y>210</Y>
+			<X>120</X>
+			<Y>640</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1783,8 +1784,8 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1763932216179</Id>
 			<Name><![CDATA[transition12]]></Name>
-			<X>1250</X>
-			<Y>290</Y>
+			<X>120</X>
+			<Y>720</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1823,8 +1824,8 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1763932216181</Id>
 			<Name><![CDATA[transition13]]></Name>
-			<X>1250</X>
-			<Y>370</Y>
+			<X>120</X>
+			<Y>800</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1863,8 +1864,8 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 		<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 			<Id>1763932216183</Id>
 			<Name><![CDATA[FearStatechart]]></Name>
-			<X>1240</X>
-			<Y>20</Y>
+			<X>110</X>
+			<Y>450</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -1887,8 +1888,8 @@ naturalImmunity -= main.waningOfNaturalImmunity;</Action>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1764261189819</Id>
 			<Name><![CDATA[transition11]]></Name>
-			<X>885</X>
-			<Y>400</Y>
+			<X>515</X>
+			<Y>630</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>

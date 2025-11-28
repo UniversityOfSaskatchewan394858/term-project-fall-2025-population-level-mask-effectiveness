@@ -6,7 +6,7 @@
 		<Id>1762022249895</Id>
 		<Name><![CDATA[infectionTransmitted]]></Name>
 		<X>30</X>
-		<Y>190</Y>
+		<Y>180</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -41,8 +41,8 @@
 		<ReturnType>boolean</ReturnType>
 		<Id>1762072407997</Id>
 		<Name><![CDATA[isSusceptible]]></Name>
-		<X>30</X>
-		<Y>400</Y>
+		<X>740</X>
+		<Y>140</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -57,8 +57,8 @@
 		<ReturnType>boolean</ReturnType>
 		<Id>1762072577219</Id>
 		<Name><![CDATA[isExposed]]></Name>
-		<X>30</X>
-		<Y>430</Y>
+		<X>740</X>
+		<Y>170</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -73,8 +73,8 @@
 		<ReturnType>boolean</ReturnType>
 		<Id>1762072590127</Id>
 		<Name><![CDATA[isInfective]]></Name>
-		<X>30</X>
-		<Y>460</Y>
+		<X>740</X>
+		<Y>200</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -89,8 +89,8 @@
 		<ReturnType>boolean</ReturnType>
 		<Id>1762072607157</Id>
 		<Name><![CDATA[isRecovered]]></Name>
-		<X>30</X>
-		<Y>490</Y>
+		<X>740</X>
+		<Y>230</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -105,8 +105,8 @@
 		<ReturnType>boolean</ReturnType>
 		<Id>1762072626723</Id>
 		<Name><![CDATA[isDead]]></Name>
-		<X>30</X>
-		<Y>520</Y>
+		<X>740</X>
+		<Y>260</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -121,8 +121,8 @@
 		<ReturnType>boolean</ReturnType>
 		<Id>1762072638988</Id>
 		<Name><![CDATA[isVaccinatedRecovered]]></Name>
-		<X>30</X>
-		<Y>550</Y>
+		<X>740</X>
+		<Y>290</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -137,8 +137,8 @@
 		<ReturnType>boolean</ReturnType>
 		<Id>1762072666650</Id>
 		<Name><![CDATA[isVaccinated]]></Name>
-		<X>30</X>
-		<Y>580</Y>
+		<X>740</X>
+		<Y>320</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -153,8 +153,8 @@
 		<ReturnType>boolean</ReturnType>
 		<Id>1762077271194</Id>
 		<Name><![CDATA[isUnmasked]]></Name>
-		<X>970</X>
-		<Y>320</Y>
+		<X>600</X>
+		<Y>550</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -169,8 +169,8 @@
 		<ReturnType>boolean</ReturnType>
 		<Id>1762077323326</Id>
 		<Name><![CDATA[isMasked]]></Name>
-		<X>970</X>
-		<Y>350</Y>
+		<X>600</X>
+		<Y>580</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -185,8 +185,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1762215634275</Id>
 		<Name><![CDATA[considerMasking]]></Name>
-		<X>810</X>
-		<Y>440</Y>
+		<X>440</X>
+		<Y>670</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -201,8 +201,8 @@
 		<ReturnType>boolean</ReturnType>
 		<Id>1763932216147</Id>
 		<Name><![CDATA[isCalm]]></Name>
-		<X>1340</X>
-		<Y>60</Y>
+		<X>210</X>
+		<Y>490</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -217,8 +217,8 @@
 		<ReturnType>boolean</ReturnType>
 		<Id>1763932216149</Id>
 		<Name><![CDATA[isAware]]></Name>
-		<X>1340</X>
-		<Y>80</Y>
+		<X>210</X>
+		<Y>510</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -233,8 +233,8 @@
 		<ReturnType>boolean</ReturnType>
 		<Id>1763932216151</Id>
 		<Name><![CDATA[isWorried]]></Name>
-		<X>1340</X>
-		<Y>100</Y>
+		<X>210</X>
+		<Y>530</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -249,8 +249,8 @@
 		<ReturnType>boolean</ReturnType>
 		<Id>1763932216153</Id>
 		<Name><![CDATA[isAfraid]]></Name>
-		<X>1340</X>
-		<Y>120</Y>
+		<X>210</X>
+		<Y>550</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -265,8 +265,24 @@
 		<ReturnType>boolean</ReturnType>
 		<Id>1763932216155</Id>
 		<Name><![CDATA[isPanic]]></Name>
-		<X>1340</X>
-		<Y>140</Y>
+		<X>210</X>
+		<Y>570</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Body xmlns:al="http://anylogic.com"/>
+	</Function>
+	<Function AccessType="default" StaticFunction="false">
+		<ReturnModificator>VOID</ReturnModificator>
+		<ReturnType>double</ReturnType>
+		<Id>1764261026564</Id>
+		<Name><![CDATA[considerUnmasking]]></Name>
+		<X>440</X>
+		<Y>700</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -278,31 +294,11 @@
 	</Function>
 	<Function AccessType="default" StaticFunction="false">
 		<ReturnModificator>RETURNS_VALUE</ReturnModificator>
-		<ReturnType>List&lt;Person&gt;</ReturnType>
-		<Id>1763932350795</Id>
-		<Name><![CDATA[getNeighbors]]></Name>
+		<ReturnType>ArrayList&lt;Person&gt;</ReturnType>
+		<Id>1764289803855</Id>
+		<Name><![CDATA[getSurroundingNeighbors]]></Name>
 		<X>30</X>
 		<Y>300</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Parameter>
-			<Name><![CDATA[radius]]></Name>
-			<Type><![CDATA[double]]></Type>
-		</Parameter>
-		<Body xmlns:al="http://anylogic.com"/>
-	</Function>
-	<Function AccessType="default" StaticFunction="false">
-		<ReturnModificator>VOID</ReturnModificator>
-		<ReturnType>double</ReturnType>
-		<Id>1764261026564</Id>
-		<Name><![CDATA[considerUnmasking]]></Name>
-		<X>810</X>
-		<Y>470</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

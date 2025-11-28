@@ -49,8 +49,10 @@ double considerVaccination()
 if (time() >= main.vaccineAvailabilityDay) {
 	if (main.availableVaccinations > 0) {
 		double vaccinationRate = main.initialVaccinationRate - main.initialVaccineHesitancy; 
+		
+		
 		// Increase with fear level
-		vaccinationRate += ((fearLevel * 100) * main.fearInducedVaccinationAcceptanceIncreaseRate);
+		vaccinationRate += fearLevel * main.maxFearInducedVaccinationRateIncrease;
 	
 		// Increase if vaccine mandate is in effect
 		if (time() >= main.vaccineMandateStartDay) {
@@ -113,10 +115,11 @@ return this.inState(Masked);
 double considerMasking()
 {/*ALCODESTART::1762215634275*/
 double maskAdoptionRate = main.initialMaskAdoptionRate;
+
 // Increase with fear level
-maskAdoptionRate += ((fearLevel * 100) * main.fearInducedMaskAdoptionIncreaseRate);
+maskAdoptionRate += fearLevel * main.maxFearInducedMaskAdoptionRateIncrease;
 // Increase with popularity
-maskAdoptionRate += ((main.maskPopularity * 100) * main.popularityInducedMaskAdoptionIncreaseRate);
+maskAdoptionRate += main.maskPopularity * main.maxPopularityInducedMaskAdoptionRateIncrease;
 
 // Increase if mask mandate is in effect
 if ((time() >= main.maskMandateStartDay)) {
@@ -154,9 +157,32 @@ boolean isPanic()
 return this.inState(Panic);
 /*ALCODEEND*/}
 
-List<Person> getNeighbors(double radius)
-{/*ALCODESTART::1763932350795*/
-List<Person> neighbors = new ArrayList<>();
+double considerUnmasking()
+{/*ALCODESTART::1764261026564*/
+// This uses randomFalse() instead of randomTrue() to determine
+// if the agent should unmask or not
+
+double maskAdoptionRate = main.initialMaskAdoptionRate;
+
+// Increase with fear level
+maskAdoptionRate += fearLevel * main.maxFearInducedMaskAdoptionRateIncrease;
+// Increase with popularity
+maskAdoptionRate += main.maskPopularity * main.maxPopularityInducedMaskAdoptionRateIncrease;
+
+// Increase if mask mandate is in effect
+if ((time() >= main.maskMandateStartDay)) {
+		maskAdoptionRate += main.maskMandateInducedAdoptionRateIncrease;
+}
+
+
+if (randomFalse(maskAdoptionRate)) {
+	send("Unmask", this);
+}
+/*ALCODEEND*/}
+
+ArrayList<Person> getSurroundingNeighbors()
+{/*ALCODESTART::1764289803855*/
+ArrayList<Person> neighbors = new ArrayList<Person>();
 
 // Iterate over all agents in the population
 for (Person p : main.People) { 
@@ -168,34 +194,15 @@ for (Person p : main.People) {
         double distance = Math.sqrt(dx*dx + dy*dy);
 		
 		// If agent is within range add to list
-        if (distance <= radius) {
+        if (distance <= neighborhoodRadius) {
             neighbors.add(p);
+            if (! neighborHistory.contains(p.ID)) {
+            	neighborHistory.add(p.ID);
+            }
         }
     }
 }
 
 return neighbors;
-/*ALCODEEND*/}
-
-double considerUnmasking()
-{/*ALCODESTART::1764261026564*/
-// This uses randomFalse() instead of randomTrue() to determine
-// if the agent should unmask or not
-
-double maskAdoptionRate = main.initialMaskAdoptionRate;
-// Increase with fear level
-maskAdoptionRate += ((fearLevel * 100) * main.fearInducedMaskAdoptionIncreaseRate);
-// Increase with popularity
-maskAdoptionRate += ((main.maskPopularity * 100) * main.popularityInducedMaskAdoptionIncreaseRate);
-
-// Increase if mask mandate is in effect
-if ((time() >= main.maskMandateStartDay)) {
-		maskAdoptionRate += main.maskMandateInducedAdoptionRateIncrease;
-}
-
-
-if (randomFalse(maskAdoptionRate)) {
-	send("Unmask", this);
-}
 /*ALCODEEND*/}
 
