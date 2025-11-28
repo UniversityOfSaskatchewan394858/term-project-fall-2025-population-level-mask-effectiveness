@@ -46,8 +46,8 @@
 	</Variable>
 	<Variable Class="PlainVariable">
 		<Id>1762192732639</Id>
-		<Name><![CDATA[incidentInfectionCount]]></Name>
-		<X>300</X>
+		<Name><![CDATA[cumulativeIncidentInfectionCount]]></Name>
+		<X>-340</X>
 		<Y>-980</Y>
 		<Label>
 			<X>10</X>
@@ -68,8 +68,8 @@
 	</Variable>
 	<Variable Class="PlainVariable">
 		<Id>1762192742792</Id>
-		<Name><![CDATA[maskingPreventedPotentialExposureCount]]></Name>
-		<X>300</X>
+		<Name><![CDATA[cumulativeMaskingPreventedPotentialExposureCount]]></Name>
+		<X>-340</X>
 		<Y>-950</Y>
 		<Label>
 			<X>10</X>
@@ -90,8 +90,8 @@
 	</Variable>
 	<Variable Class="PlainVariable">
 		<Id>1762192770996</Id>
-		<Name><![CDATA[vaccinePreventedPotentialExposureCount]]></Name>
-		<X>300</X>
+		<Name><![CDATA[cumulativeVaccinePreventedPotentialExposureCount]]></Name>
+		<X>-340</X>
 		<Y>-920</Y>
 		<Label>
 			<X>10</X>
@@ -173,6 +173,72 @@
 			<Type><![CDATA[ArrayList<Integer>]]></Type>
 			<InitialValue Class="CodeValue">
 				<Code><![CDATA[new ArrayList<Integer>()]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1764296671323</Id>
+		<Name><![CDATA[incidentInfectionCount]]></Name>
+		<X>400</X>
+		<Y>-980</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[HashMap<Integer, Integer>]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new HashMap<Integer, Integer>();]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1764297674949</Id>
+		<Name><![CDATA[maskingPreventedPotentialExposureCount]]></Name>
+		<X>400</X>
+		<Y>-950</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[HashMap<Integer, Integer>]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new HashMap<Integer, Integer>();]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1764297696211</Id>
+		<Name><![CDATA[vaccinePreventedPotentialExposureCount]]></Name>
+		<X>400</X>
+		<Y>-920</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[HashMap<Integer, Integer>]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new HashMap<Integer, Integer>();]]></Code>
 			</InitialValue>
 		</Properties>
 	</Variable>

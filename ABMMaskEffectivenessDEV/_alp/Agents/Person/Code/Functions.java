@@ -1,7 +1,7 @@
 boolean infectionTransmitted(Person infector)
 {/*ALCODESTART::1762022249895*/
 double infectionRate = 1.0;
-String immunityState;
+int day = (int) Math.floor(time());
 
 // Checks if agent is masked
 if (inState(Masked)) {
@@ -31,13 +31,18 @@ if (randomTrue(infectionRate)) {
 	return true;
 }
 else {
-	// Updates charts in Main if infection has been prevented
+	// Updates charts and hashmaps in Main if infection has been prevented
 	if (inState(Masked) || infector.inState(Person.Masked)) {
-		main.maskingPreventedPotentialExposureCount += 1;
+		main.cumulativeMaskingPreventedPotentialExposureCount += 1;
+		main.maskingPreventedPotentialExposureCount.put(day,
+		main.maskingPreventedPotentialExposureCount.getOrDefault(day, 0) + 1);
+		
 	}
 	
 	if (inState(Vaccinated) || inState(VaccinatedRecovered)) {
-		main.vaccinePreventedPotentialExposureCount += 1;
+		main.cumulativeVaccinePreventedPotentialExposureCount += 1;
+		main.vaccinePreventedPotentialExposureCount.put(day,
+		main.maskingPreventedPotentialExposureCount.getOrDefault(day, 0) + 1);
 	}
 	return false;
 }

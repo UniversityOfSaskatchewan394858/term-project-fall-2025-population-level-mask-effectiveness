@@ -20,3 +20,29 @@ void updateMaskPopularity()
 maskPopularity = (double) People.Masked() / (startingPopulation - deadAgentCount)
 /*ALCODEEND*/}
 
+void updateDataSets()
+{/*ALCODESTART::1764298439539*/
+int day = (int) Math.floor(time());
+int prevDay;
+
+// Updates datasets with previous day's values in the hashmaps
+if (day > 0) {
+	prevDay = day - 1;
+	
+	if (incidentInfectionCount.containsKey(prevDay)) {
+		incidentInfectionsDS.add(prevDay, 
+		incidentInfectionCount.get(prevDay));
+	}
+	
+	if (maskingPreventedPotentialExposureCount.containsKey(prevDay)) {
+		maskingPreventedPotentialExposureCountDS.add(prevDay, 
+		maskingPreventedPotentialExposureCount.get(prevDay));
+	}
+	
+	if (vaccinePreventedPotentialExposureCount.containsKey(prevDay)) {
+		vaccinePreventedPotentialExposureCountDS.add(prevDay,
+		vaccinePreventedPotentialExposureCount.get(prevDay));
+	}
+}
+/*ALCODEEND*/}
+
