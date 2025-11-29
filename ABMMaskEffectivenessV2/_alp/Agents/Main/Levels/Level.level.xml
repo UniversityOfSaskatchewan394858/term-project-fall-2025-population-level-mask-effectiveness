@@ -100,7 +100,7 @@
 		</DataItem>
 		<DataItem>
 			<Id>1762027138603</Id>
-			<Expression>People.Dead()</Expression>
+			<Expression>deadAgentCount</Expression>
 			<Color>-8355712</Color>
 			<Title>Dead</Title>
 		</DataItem>
@@ -224,7 +224,7 @@
 			<Id>1762073714887</Id>
 			<Expression>my_dataset3</Expression>
 			<Color>-8355712</Color>
-			<Expression2>People.Dead()</Expression2>
+			<Expression2>deadAgentCount</Expression2>
 			<Expression2Flag>true</Expression2Flag>
 			<PointStyle>NONE</PointStyle>
 			<LineWidth>1.0</LineWidth>
@@ -282,7 +282,7 @@
 			<EmbeddedIcon>false</EmbeddedIcon>
 			<TextColor>-16777216</TextColor>
 			<Enabled>true</Enabled>
-			<ActionCode>maskMandateInEffect = true;
+			<ActionCode>maskMandateStartDay = time();
 traceln("Mask mandate applied on day: " + time());</ActionCode>
 		</BasicProperties>
 		<ExtendedProperties>
@@ -459,7 +459,7 @@ traceln("Mask mandate applied on day: " + time());</ActionCode>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>false</ShowLabel>
 		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-		<AutoUpdate>true</AutoUpdate>
+		<AutoUpdate>false</AutoUpdate>
 		<RecurrenceProperties>
 			<Id>1762192869472</Id>
 			<OccurrenceAtTime>true</OccurrenceAtTime>
@@ -506,32 +506,32 @@ traceln("Mask mandate applied on day: " + time());</ActionCode>
 		<DrawLine>true</DrawLine>
 		<Interpolation>LINEAR</Interpolation>
 		<DatasetExpression>
-			<Title>Cumulative count of incident infections</Title>
+			<Title>Count of incident infections</Title>
 			<Id>1762192870163</Id>
-			<Expression>my_dataset</Expression>
+			<Expression>incidentInfectionsDS</Expression>
 			<Color>-10496</Color>
-			<Expression2>incidentInfectionCount</Expression2>
-			<Expression2Flag>true</Expression2Flag>
+			<Expression2>incidentInfectionCount.</Expression2>
+			<Expression2Flag>false</Expression2Flag>
 			<PointStyle>NONE</PointStyle>
 			<LineWidth>1.0</LineWidth>
 		</DatasetExpression>
 		<DatasetExpression>
-			<Title>Cumulative count of potential exposures prevented by masking</Title>
+			<Title>Count of potential exposures prevented by masking</Title>
 			<Id>1762192884961</Id>
-			<Expression>my_dataset1</Expression>
+			<Expression>maskingPreventedPotentialExposureCountDS</Expression>
 			<Color>-16744320</Color>
 			<Expression2>maskingPreventedPotentialExposureCount</Expression2>
-			<Expression2Flag>true</Expression2Flag>
+			<Expression2Flag>false</Expression2Flag>
 			<PointStyle>NONE</PointStyle>
 			<LineWidth>1.0</LineWidth>
 		</DatasetExpression>
 		<DatasetExpression>
-			<Title>Cumulative count of potential exposures prevented by vaccines</Title>
+			<Title>Count of potential exposures prevented by vaccines</Title>
 			<Id>1762192885958</Id>
-			<Expression>my_dataset2</Expression>
+			<Expression>vaccinePreventedPotentialExposureCountDS</Expression>
 			<Color>-8388480</Color>
 			<Expression2>vaccinePreventedPotentialExposureCount</Expression2>
-			<Expression2Flag>true</Expression2Flag>
+			<Expression2Flag>false</Expression2Flag>
 			<PointStyle>NONE</PointStyle>
 			<LineWidth>1.0</LineWidth>
 		</DatasetExpression>
@@ -558,7 +558,7 @@ traceln("Mask mandate applied on day: " + time());</ActionCode>
 			<EmbeddedIcon>false</EmbeddedIcon>
 			<TextColor>-16777216</TextColor>
 			<Enabled>true</Enabled>
-			<ActionCode>vaccineMandateInEffect = true;
+			<ActionCode>vaccineMandateStartDay = time();
 traceln("Vaccine mandate applied on day: " + time());</ActionCode>
 		</BasicProperties>
 		<ExtendedProperties>
@@ -645,7 +645,7 @@ traceln("Vaccine mandate applied on day: " + time());</ActionCode>
 		</ExtendedProperties>
 	</Control>
 	<TimePlot>
-		<Id>1763923437907</Id>
+		<Id>1763932828986</Id>
 		<Name><![CDATA[plot2]]></Name>
 		<X>620</X>
 		<Y>-1450</Y>
@@ -659,7 +659,7 @@ traceln("Vaccine mandate applied on day: " + time());</ActionCode>
 		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 		<AutoUpdate>true</AutoUpdate>
 		<RecurrenceProperties>
-			<Id>1763923437905</Id>
+			<Id>1763932828984</Id>
 			<OccurrenceAtTime>true</OccurrenceAtTime>
 			<OccurrenceDate>1763971200000</OccurrenceDate>
 			<OccurrenceTime Class="CodeUnitValue">
@@ -705,7 +705,7 @@ traceln("Vaccine mandate applied on day: " + time());</ActionCode>
 		<Interpolation>LINEAR</Interpolation>
 		<DatasetExpression>
 			<Title>Calm</Title>
-			<Id>1763923447138</Id>
+			<Id>1763932828979</Id>
 			<Expression>my_dataset1</Expression>
 			<Color>-16711936</Color>
 			<Expression2>People.Calm()</Expression2>
@@ -715,7 +715,7 @@ traceln("Vaccine mandate applied on day: " + time());</ActionCode>
 		</DatasetExpression>
 		<DatasetExpression>
 			<Title>Aware</Title>
-			<Id>1763924018712</Id>
+			<Id>1763932828980</Id>
 			<Expression>my_dataset2</Expression>
 			<Color>-16711681</Color>
 			<Expression2>People.Aware()</Expression2>
@@ -725,7 +725,7 @@ traceln("Vaccine mandate applied on day: " + time());</ActionCode>
 		</DatasetExpression>
 		<DatasetExpression>
 			<Title>Worried</Title>
-			<Id>1763924897540</Id>
+			<Id>1763932828981</Id>
 			<Expression>my_dataset3</Expression>
 			<Color>-65281</Color>
 			<Expression2>People.Worried()</Expression2>
@@ -735,7 +735,7 @@ traceln("Vaccine mandate applied on day: " + time());</ActionCode>
 		</DatasetExpression>
 		<DatasetExpression>
 			<Title>Afraid</Title>
-			<Id>1763928627841</Id>
+			<Id>1763932828982</Id>
 			<Expression>my_dataset4</Expression>
 			<Color>-65536</Color>
 			<Expression2>People.Afraid()</Expression2>
@@ -745,7 +745,7 @@ traceln("Vaccine mandate applied on day: " + time());</ActionCode>
 		</DatasetExpression>
 		<DatasetExpression>
 			<Title>Panic</Title>
-			<Id>1763928648991</Id>
+			<Id>1763932828983</Id>
 			<Expression>my_dataset5</Expression>
 			<Color>-16777216</Color>
 			<Expression2>People.Panic()</Expression2>
@@ -759,8 +759,8 @@ traceln("Vaccine mandate applied on day: " + time());</ActionCode>
 		<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
 	</TimePlot>
 	<BarChart>
-		<Id>1763928860660</Id>
-		<Name><![CDATA[chart2]]></Name>
+		<Id>1763932828996</Id>
+		<Name><![CDATA[FearLevelChart]]></Name>
 		<X>270</X>
 		<Y>-1460</Y>
 		<Label>
@@ -773,7 +773,7 @@ traceln("Vaccine mandate applied on day: " + time());</ActionCode>
 		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 		<AutoUpdate>true</AutoUpdate>
 		<RecurrenceProperties>
-			<Id>1763928860658</Id>
+			<Id>1763932828994</Id>
 			<OccurrenceAtTime>true</OccurrenceAtTime>
 			<OccurrenceDate>1763971200000</OccurrenceDate>
 			<OccurrenceTime Class="CodeUnitValue">
@@ -811,31 +811,31 @@ traceln("Vaccine mandate applied on day: " + time());</ActionCode>
 		</Labels>
 		<ShowLegend>true</ShowLegend>
 		<DataItem>
-			<Id>1763928864410</Id>
+			<Id>1763932828989</Id>
 			<Expression>People.Calm()</Expression>
 			<Color>-16711936</Color>
 			<Title>Calm</Title>
 		</DataItem>
 		<DataItem>
-			<Id>1763929145345</Id>
+			<Id>1763932828990</Id>
 			<Expression>People.Aware()</Expression>
 			<Color>-16711681</Color>
 			<Title>Aware</Title>
 		</DataItem>
 		<DataItem>
-			<Id>1763929164656</Id>
+			<Id>1763932828991</Id>
 			<Expression>People.Worried()</Expression>
 			<Color>-65281</Color>
 			<Title>Worried</Title>
 		</DataItem>
 		<DataItem>
-			<Id>1763929180045</Id>
+			<Id>1763932828992</Id>
 			<Expression>People.Afraid()</Expression>
 			<Color>-65536</Color>
 			<Title>Afraid</Title>
 		</DataItem>
 		<DataItem>
-			<Id>1763929207738</Id>
+			<Id>1763932828993</Id>
 			<Expression>People.Panic()</Expression>
 			<Color>-16777216</Color>
 			<Title>Panic</Title>

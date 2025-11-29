@@ -47,7 +47,7 @@
 		<Rotation>0.0</Rotation>
 		<ImageFiles>
 			<ImageResourceReference>
-				<PackageName>abmmaskeffectiveness</PackageName>
+				<PackageName>abmmaskeffectivenessv2</PackageName>
 				<ClassName>mask.png</ClassName>
 			</ImageResourceReference>
 		</ImageFiles>
