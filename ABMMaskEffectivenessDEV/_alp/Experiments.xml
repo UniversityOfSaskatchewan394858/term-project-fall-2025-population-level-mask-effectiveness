@@ -49,7 +49,7 @@
 				<ParameterName>startingPopulation</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>initialVaccineHesitancy</ParameterName>
+				<ParameterName>vaccineHesitancy</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>initialMaskAdoptionRate</ParameterName>
@@ -196,7 +196,7 @@
 				<ParameterName>startingPopulation</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>initialVaccineHesitancy</ParameterName>
+				<ParameterName>vaccineHesitancy</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>initialMaskAdoptionRate</ParameterName>

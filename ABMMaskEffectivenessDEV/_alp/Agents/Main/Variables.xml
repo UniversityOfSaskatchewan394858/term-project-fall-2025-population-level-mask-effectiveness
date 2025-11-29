@@ -259,7 +259,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.56]]></Code>
+				<Code><![CDATA[0.66]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048835</Id>
@@ -328,7 +328,7 @@
 	</Variable>
 	<Variable Class="Parameter">
 		<Id>1762015048850</Id>
-		<Name><![CDATA[initialVaccineHesitancy]]></Name>
+		<Name><![CDATA[vaccineHesitancy]]></Name>
 		<X>-410</X>
 		<Y>880</Y>
 		<Label>
@@ -343,7 +343,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.01]]></Code>
+				<Code><![CDATA[0.13]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048848</Id>
@@ -371,7 +371,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.01]]></Code>
+				<Code><![CDATA[0.05]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048852</Id>
@@ -455,7 +455,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.00833333333]]></Code>
+				<Code><![CDATA[0.00555555555]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048868</Id>
@@ -483,7 +483,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.25]]></Code>
+				<Code><![CDATA[0.27]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048872</Id>
@@ -539,7 +539,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.00833333333]]></Code>
+				<Code><![CDATA[0.00952380952]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048888</Id>
@@ -567,7 +567,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[30]]></Code>
+				<Code><![CDATA[366]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048892</Id>
@@ -595,7 +595,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[100]]></Code>
+				<Code><![CDATA[278]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048896</Id>
@@ -623,7 +623,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.1]]></Code>
+				<Code><![CDATA[0.511]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048900</Id>
@@ -650,6 +650,9 @@
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[0.707]]></Code>
+			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048904</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
@@ -732,7 +735,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.33]]></Code>
+				<Code><![CDATA[0.8]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048916</Id>
@@ -760,7 +763,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[vaccineAvailabilityDay+5]]></Code>
+				<Code><![CDATA[320]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048920</Id>
@@ -788,7 +791,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[50000]]></Code>
+				<Code><![CDATA[100000]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048924</Id>
@@ -844,7 +847,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.25]]></Code>
+				<Code><![CDATA[0.04]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762154685749</Id>

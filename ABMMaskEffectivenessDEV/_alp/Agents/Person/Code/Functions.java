@@ -53,7 +53,7 @@ double considerVaccination()
 // If vaccinations are available at the current day
 if (time() >= main.vaccineAvailabilityDay) {
 	if (main.availableVaccinations > 0) {
-		double vaccinationRate = main.initialVaccinationRate - main.initialVaccineHesitancy; 
+		double vaccinationRate = main.initialVaccinationRate - main.vaccineHesitancy; 
 		
 		
 		// Increase with fear level
