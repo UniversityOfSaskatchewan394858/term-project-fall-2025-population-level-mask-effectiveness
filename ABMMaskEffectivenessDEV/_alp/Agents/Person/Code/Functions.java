@@ -164,8 +164,10 @@ return this.inState(Panic);
 
 double considerUnmasking()
 {/*ALCODESTART::1764261026564*/
-// This uses randomFalse() instead of randomTrue() to determine
-// if the agent should unmask or not
+// This uses the complement of the maskAdoptionRate to determine
+// if a Person should unmask
+
+// ----- Calculating maskAdoptionRate ----- //
 
 double maskAdoptionRate = main.initialMaskAdoptionRate;
 
@@ -180,7 +182,8 @@ if ((time() >= main.maskMandateStartDay)) {
 }
 
 
-if (randomFalse(maskAdoptionRate)) {
+double unmaskRate = 1 - maskAdoptionRate;
+if (randomFalse(unmaskRate)) {
 	send("Unmask", this);
 }
 /*ALCODEEND*/}

@@ -148,7 +148,7 @@
               Constant="false"
               AccessType="public"
               StaticVariable="false">
-			<Type><![CDATA[double]]></Type>
+			<Type><![CDATA[int]]></Type>
 			<InitialValue Class="CodeValue">
 				<Code><![CDATA[0]]></Code>
 			</InitialValue>
@@ -239,6 +239,50 @@
 			<Type><![CDATA[HashMap<Integer, Integer>]]></Type>
 			<InitialValue Class="CodeValue">
 				<Code><![CDATA[new HashMap<Integer, Integer>();]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1764378854746</Id>
+		<Name><![CDATA[infectionChains]]></Name>
+		<X>110</X>
+		<Y>-810</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[ArrayList<String>]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new ArrayList<String>();]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1764382204228</Id>
+		<Name><![CDATA[dailyStateCounts]]></Name>
+		<X>400</X>
+		<Y>-880</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[HashMap<Integer, int[]>]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new HashMap<Integer, int[]>();]]></Code>
 			</InitialValue>
 		</Properties>
 	</Variable>
@@ -399,7 +443,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.33]]></Code>
+				<Code><![CDATA[0.4]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048856</Id>
@@ -427,7 +471,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.2]]></Code>
+				<Code><![CDATA[0.33]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1762015048860</Id>

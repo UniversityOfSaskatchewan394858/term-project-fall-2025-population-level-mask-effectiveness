@@ -972,6 +972,10 @@ deleteSelf();</Action>
 					<Y>0</Y>
 				</Point>
 				<Point>
+					<X>37</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
 					<X>60</X>
 					<Y>0</Y>
 				</Point>
@@ -983,7 +987,11 @@ deleteSelf();</Action>
 // Update incident infection count
 int day = (int) Math.floor(time());
 main.incidentInfectionCount.put(day, 
-main.incidentInfectionCount.getOrDefault(day, 0) + 1);</Action>
+main.incidentInfectionCount.getOrDefault(day, 0) + 1);
+
+// Add to infection chain
+InfectionRecord record = new InfectionRecord(time(), this, infector);
+main.infectionChains.add(record.toString());</Action>
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">DAY</Unit>
@@ -993,7 +1001,6 @@ main.incidentInfectionCount.getOrDefault(day, 0) + 1);</Action>
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_DAY</Unit>
 				</Rate>
-				<Guard>//infectionTransmitted(infector) == true</Guard>
 				<MessageType>Object</MessageType>
 				<DefaultTransition>true</DefaultTransition>
 				<FilterType>satisfies</FilterType>
