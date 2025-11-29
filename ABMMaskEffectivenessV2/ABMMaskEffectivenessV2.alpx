@@ -7,7 +7,7 @@
 		<Id>1762014522361</Id>
 		<Name><![CDATA[ABMMaskEffectivenessV2]]></Name>
 		<EngineVersion>6</EngineVersion>
-		<JavaPackageName><![CDATA[abmmaskeffectiveness]]></JavaPackageName>
+		<JavaPackageName><![CDATA[abmmaskeffectivenessv2]]></JavaPackageName>
 		<ModelTimeUnit>Day</ModelTimeUnit>
 		<Folders/>
 		<ActiveObjectClasses/>
@@ -54,6 +54,12 @@
 			<Inputs/>
 			<Outputs/>
 		</RunConfiguration>
+		<JavaClasses>
+			<JavaClass>
+				<Id>1764377912801</Id>
+				<Name><![CDATA[InfectionRecord]]></Name>
+			</JavaClass>
+		</JavaClasses>
 		<RequiredLibraryReference>
 			<LibraryName>com.anylogic.libraries.modules.markup_descriptors</LibraryName>
 			<VersionMajor>1</VersionMajor>

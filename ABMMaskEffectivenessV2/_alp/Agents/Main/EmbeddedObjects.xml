@@ -14,12 +14,12 @@
 		<ShowLabel>true</ShowLabel>
 		<PresentationId>1762017763598</PresentationId>
 		<ActiveObjectClass>
-			<PackageName>abmmaskeffectiveness</PackageName>
+			<PackageName>abmmaskeffectivenessv2</PackageName>
 			<ClassName>Person</ClassName>
 		</ActiveObjectClass>
 		<GenericParameterSubstitute>
 			<GenericParameterSubstituteReference>
-				<PackageName>abmmaskeffectiveness</PackageName>
+				<PackageName>abmmaskeffectivenessv2</PackageName>
 				<ClassName>Person</ClassName>
 				<ItemName>1762016715637</ItemName>
 			</GenericParameterSubstituteReference>
@@ -33,6 +33,13 @@
 		<StatisticsItem>
 			<Id>1762072220499</Id>
 			<Name><![CDATA[Susceptible]]></Name>
+			<Type><![CDATA[count]]></Type>
+			<Expression/>
+			<Condition>agent.isSusceptible()</Condition>
+		</StatisticsItem>
+		<StatisticsItem>
+			<Id>1763932977247</Id>
+			<Name><![CDATA[Susceptible1]]></Name>
 			<Type><![CDATA[count]]></Type>
 			<Expression/>
 			<Condition>agent.isSusceptible()</Condition>
@@ -94,35 +101,35 @@
 			<Condition>agent.isMasked()</Condition>
 		</StatisticsItem>
 		<StatisticsItem>
-			<Id>1763923390836</Id>
+			<Id>1763933075821</Id>
 			<Name><![CDATA[Calm]]></Name>
 			<Type><![CDATA[count]]></Type>
 			<Expression/>
 			<Condition>agent.isCalm()</Condition>
 		</StatisticsItem>
 		<StatisticsItem>
-			<Id>1763923980910</Id>
+			<Id>1763933095600</Id>
 			<Name><![CDATA[Aware]]></Name>
 			<Type><![CDATA[count]]></Type>
 			<Expression/>
 			<Condition>agent.isAware()</Condition>
 		</StatisticsItem>
 		<StatisticsItem>
-			<Id>1763924941118</Id>
+			<Id>1763933118596</Id>
 			<Name><![CDATA[Worried]]></Name>
 			<Type><![CDATA[count]]></Type>
 			<Expression/>
 			<Condition>agent.isWorried()</Condition>
 		</StatisticsItem>
 		<StatisticsItem>
-			<Id>1763928556558</Id>
+			<Id>1763933136294</Id>
 			<Name><![CDATA[Afraid]]></Name>
 			<Type><![CDATA[count]]></Type>
 			<Expression/>
 			<Condition>agent.isAfraid()</Condition>
 		</StatisticsItem>
 		<StatisticsItem>
-			<Id>1763928575117</Id>
+			<Id>1763933160276</Id>
 			<Name><![CDATA[Panic]]></Name>
 			<Type><![CDATA[count]]></Type>
 			<Expression/>
