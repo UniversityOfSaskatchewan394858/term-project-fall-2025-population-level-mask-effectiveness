@@ -4,7 +4,7 @@
 		<Id>1762014522373</Id>
 		<Name><![CDATA[Baseline]]></Name>
 		<CommandLineArguments/>
-		<MaximumMemory>512</MaximumMemory>
+		<MaximumMemory>8192</MaximumMemory>
 		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
 		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 		<SeedValue>1</SeedValue>
@@ -106,9 +106,6 @@
 				<ParameterName>vaccineMandateInducedAdoptionRateIncrease</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>initialInfectiveCount</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>distanceBasedConnectionRange</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -125,6 +122,15 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>scaleFreeM</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>percentageOfStartingInfective</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>percentageOfStartingExposed</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>percentageOfStartingRecovered</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
@@ -253,9 +259,6 @@
 				<ParameterName>vaccineMandateInducedAdoptionRateIncrease</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>initialInfectiveCount</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>distanceBasedConnectionRange</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -272,6 +275,15 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>scaleFreeM</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>percentageOfStartingInfective</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>percentageOfStartingExposed</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>percentageOfStartingRecovered</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
