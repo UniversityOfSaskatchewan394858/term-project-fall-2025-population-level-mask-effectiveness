@@ -74,7 +74,7 @@ Each agent has:
 
 ### 1. **Baseline Scenario**
 Represents moderate real-world conditions:
-- MaskEffectiveness = 0.6  
+- MaskEffectiveness = 0.66  
 - InitialMaskAdoption = 0.2  
 - No mandates  
 - Vaccination available on day 40  
