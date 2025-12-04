@@ -85,5 +85,8 @@ void updateDailyStateCounts()
 int day = (int) Math.floor(time());
 int[] stateCounts = {People.Susceptible(), People.Exposed(), People.Infective(), People.Recovered(), People.Vaccinated(), People.VaccinatedRecovered(), deadAgentCount};
 dailyStateCounts.put(day, stateCounts);
+
+// Track peak Infective count
+peakInfectiousCount = max( peakInfectiousCount, People.Infective() );
 /*ALCODEEND*/}
 
