@@ -153,16 +153,104 @@
 	<ParamVariationExperiment ActiveObjectClassId="1762014522365">
 		<Id>1764865848667</Id>
 		<Name><![CDATA[Sensitivity_InitialMaskAdoption]]></Name>
+		<AdditionalClassCode>double finalInfections;
+double peakInfectives;</AdditionalClassCode>
 		<CommandLineArguments/>
 		<MaximumMemory>512</MaximumMemory>
 		<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
-		<AfterSimulationRunCode>finalInfections = main.incidentInfectionCount;
-peakInfectives = main.peakInfectiousCount;</AfterSimulationRunCode>
+		<AfterSimulationRunCode>finalInfections = root.cumulativeIncidentInfectionCount;
+peakInfectives = root.peakInfectiousCount;</AfterSimulationRunCode>
 		<SeedValue>1</SeedValue>
 		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
 		<VmArgs/>
 		<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+		<Presentation>
+			<Plot>
+				<Id>1764870158254</Id>
+				<Name><![CDATA[plot]]></Name>
+				<X>100</X>
+				<Y>110</Y>
+				<Label>
+					<X>0</X>
+					<Y>-10</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<AutoUpdate>true</AutoUpdate>
+				<RecurrenceProperties>
+					<Id>1764870158252</Id>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1764921600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits">DAY</Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits">DAY</Unit>
+					</RecurrenceCode>
+				</RecurrenceProperties>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Width>530</Width>
+				<Height>390</Height>
+				<BackgroundColor/>
+				<BorderColor/>
+				<ChartArea>
+					<XOffset>50</XOffset>
+					<YOffset>30</YOffset>
+					<Width>450</Width>
+					<Height>300</Height>
+					<BackgroundColor>-1</BackgroundColor>
+					<BorderColor>-16777216</BorderColor>
+					<GridColor>-12566464</GridColor>
+				</ChartArea>
+				<Legend>
+					<Place>SOUTH</Place>
+					<TextColor>-16777216</TextColor>
+					<Size>30</Size>
+				</Legend>
+				<Labels>
+					<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+					<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+					<TextColor>-12566464</TextColor>
+				</Labels>
+				<ShowLegend>true</ShowLegend>
+				<VerScaleFromExpression>0</VerScaleFromExpression>
+				<VerScaleToExpression>1</VerScaleToExpression>
+				<VerScaleType>AUTO</VerScaleType>
+				<DrawLine>true</DrawLine>
+				<Interpolation>LINEAR</Interpolation>
+				<DatasetExpression>
+					<Title>Title</Title>
+					<Id>1764870159247</Id>
+					<Expression>my_dataset</Expression>
+					<Color>-14774017</Color>
+					<Expression2>finalInfections</Expression2>
+					<Expression2Flag>true</Expression2Flag>
+					<PointStyle>CIRCLE</PointStyle>
+					<LineWidth>1.0</LineWidth>
+					<HorizontalAxisExpression>initialMaskAdoptionRate</HorizontalAxisExpression>
+				</DatasetExpression>
+				<DatasetExpression>
+					<Title>Title 1</Title>
+					<Id>1764870169416</Id>
+					<Expression>my_dataset1</Expression>
+					<Color>-3137392</Color>
+					<Expression2>peakInfectives</Expression2>
+					<Expression2Flag>true</Expression2Flag>
+					<PointStyle>CIRCLE</PointStyle>
+					<LineWidth>1.0</LineWidth>
+					<HorizontalAxisExpression>initialMaskAdoptionRate</HorizontalAxisExpression>
+				</DatasetExpression>
+				<SamplesToKeep>100</SamplesToKeep>
+				<HorScaleFromExpression>0</HorScaleFromExpression>
+				<HorScaleToExpression>1</HorScaleToExpression>
+				<HorScaleType>AUTO</HorScaleType>
+			</Plot>
+		</Presentation>
 		<AllowParallelEvaluations>true</AllowParallelEvaluations>
 		<UseFreeformParameters>false</UseFreeformParameters>
 		<NumberOfRuns>10</NumberOfRuns>
