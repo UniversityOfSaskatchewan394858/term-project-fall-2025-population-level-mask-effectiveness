@@ -125,7 +125,7 @@ Key finding:
 ## Running the Model
 
 ### Requirements
-- AnyLogic 8.9.5 PLE  
+- AnyLogic 8.9.6 PLE  
 - Java JDK installed (if required by AnyLogic)
 
 ### Instructions
