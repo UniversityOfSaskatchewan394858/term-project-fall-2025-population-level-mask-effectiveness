@@ -165,6 +165,66 @@ peakInfectives = root.peakInfectiousCount;</AfterSimulationRunCode>
 		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
 		<VmArgs/>
 		<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+		<AnalysisData>
+			<DataSet>
+				<Id>1764870937794</Id>
+				<Name><![CDATA[finalInfectionsDS]]></Name>
+				<X>220</X>
+				<Y>590</Y>
+				<Label>
+					<X>15</X>
+					<Y>0</Y>
+				</Label>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>true</ShowLabel>
+				<AutoUpdate>false</AutoUpdate>
+				<RecurrenceProperties>
+					<Id>1764870937792</Id>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1764921600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits">DAY</Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits">DAY</Unit>
+					</RecurrenceCode>
+				</RecurrenceProperties>
+				<FreezeXAxis>true</FreezeXAxis>
+				<SamplesToKeep>100</SamplesToKeep>
+			</DataSet>
+			<DataSet>
+				<Id>1764870940289</Id>
+				<Name><![CDATA[peakInfectivesDS]]></Name>
+				<X>220</X>
+				<Y>630</Y>
+				<Label>
+					<X>15</X>
+					<Y>0</Y>
+				</Label>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>true</ShowLabel>
+				<AutoUpdate>false</AutoUpdate>
+				<RecurrenceProperties>
+					<Id>1764870940287</Id>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1764921600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits">DAY</Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits">DAY</Unit>
+					</RecurrenceCode>
+				</RecurrenceProperties>
+				<FreezeXAxis>true</FreezeXAxis>
+				<SamplesToKeep>100</SamplesToKeep>
+			</DataSet>
+		</AnalysisData>
 		<Presentation>
 			<Plot>
 				<Id>1764870158254</Id>
@@ -224,33 +284,35 @@ peakInfectives = root.peakInfectiousCount;</AfterSimulationRunCode>
 				<DrawLine>true</DrawLine>
 				<Interpolation>LINEAR</Interpolation>
 				<DatasetExpression>
-					<Title>Title</Title>
+					<Title>Final infections</Title>
 					<Id>1764870159247</Id>
-					<Expression>my_dataset</Expression>
+					<Expression>finalInfectionsDS</Expression>
 					<Color>-14774017</Color>
 					<Expression2>finalInfections</Expression2>
-					<Expression2Flag>true</Expression2Flag>
+					<Expression2Flag>false</Expression2Flag>
 					<PointStyle>CIRCLE</PointStyle>
 					<LineWidth>1.0</LineWidth>
 					<HorizontalAxisExpression>initialMaskAdoptionRate</HorizontalAxisExpression>
 				</DatasetExpression>
 				<DatasetExpression>
-					<Title>Title 1</Title>
+					<Title>Peak infectives</Title>
 					<Id>1764870169416</Id>
-					<Expression>my_dataset1</Expression>
+					<Expression>peakInfectivesDS</Expression>
 					<Color>-3137392</Color>
 					<Expression2>peakInfectives</Expression2>
-					<Expression2Flag>true</Expression2Flag>
+					<Expression2Flag>false</Expression2Flag>
 					<PointStyle>CIRCLE</PointStyle>
 					<LineWidth>1.0</LineWidth>
 					<HorizontalAxisExpression>initialMaskAdoptionRate</HorizontalAxisExpression>
 				</DatasetExpression>
-				<SamplesToKeep>100</SamplesToKeep>
+				<SamplesToKeep>10000</SamplesToKeep>
 				<HorScaleFromExpression>0</HorScaleFromExpression>
 				<HorScaleToExpression>1</HorScaleToExpression>
 				<HorScaleType>AUTO</HorScaleType>
 			</Plot>
 		</Presentation>
+		<AfterIterationCode>finalInfectionsDS.add(initialMaskAdoptionRate, finalInfections);
+peakInfectivesDS.add(initialMaskAdoptionRate, peakInfectives);</AfterIterationCode>
 		<AllowParallelEvaluations>true</AllowParallelEvaluations>
 		<UseFreeformParameters>false</UseFreeformParameters>
 		<NumberOfRuns>10</NumberOfRuns>
