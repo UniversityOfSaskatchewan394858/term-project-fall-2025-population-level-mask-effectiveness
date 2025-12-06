@@ -1,6 +1,7 @@
 # Population-Level Mask Use - Agent-Based Simulation  
 CMPT 394 - Term Project (Fall 2025)  
 University of Saskatchewan
+ABMMaskEffectivenessV2 is the final version
 
 ## Overview
 This project investigates the impact of population-level mask use on airborne infectious disease transmission using an Agent-Based Model (ABM).  
